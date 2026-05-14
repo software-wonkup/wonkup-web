@@ -71,19 +71,44 @@ const verticals = [
 ];
 
 const team = [
-  { name: "Equipo 1", role: "CEO & Fundador", photo: "/images/web/perfil-1.png" },
-  { name: "Equipo 2", role: "Directora de Programas", photo: "/images/web/perfil-2.png" },
-  { name: "Equipo 3", role: "Head de Inversiones", photo: "/images/web/perfil-3.png" },
-  { name: "Equipo 4", role: "Líder de Comunidad", photo: "/images/web/perfil-4.png" },
+  { name: "Noel Gonzales", role: "Founder", photo: "/images/web/equipo/noel-gonzales.jpeg" },
+  { name: "Edinson Gonzales", role: "CEO", photo: "/images/web/equipo/edinson-gonzales.jpeg" },
+  { name: "Kevin Veliz", role: "CTO", photo: "/images/web/equipo/kevin-veliz.jpeg" },
+  { name: "Daniel Ordoñez", role: "Head of Prototyping", photo: "/images/web/equipo/daniel-ordonez.jpeg" },
+  { name: "Jhean Anco", role: "PMO", photo: "/images/web/equipo/jhean-anco.jpeg" },
 ];
 
 const partners = [
-  "Aliado A",
-  "Aliado B",
-  "Aliado C",
-  "Aliado D",
-  "Aliado E",
-  "Aliado F",
+  {
+    name: "Agora",
+    logo: "/images/web/aliados/agora.jpg",
+    url: "https://www.facebook.com/ColegioAgoraChanchamayo",
+  },
+  {
+    name: "Academia Personal Class",
+    logo: "/images/web/aliados/personalclass.png",
+    url: "https://www.personalclass.edu.pe/",
+  },
+  {
+    name: "Vapetra",
+    logo: "/images/web/aliados/vapetra.png",
+    url: "https://vapetra.com/web/inicio",
+  },
+  {
+    name: "Inkaris",
+    logo: "/images/web/aliados/inkaris.png",
+    url: "https://inkarisgrains.com/web/inicio",
+  },
+  {
+    name: "Hermoza Luz",
+    logo: "/images/web/aliados/hermosa-luz.jpeg",
+    url: "https://www.facebook.com/people/Inversiones-y-Servicios-Hermoza-Luz-SRL/100063532483963/?locale=es_ES&ref=1",
+  },
+  {
+    name: "Milagritos",
+    logo: "/images/web/aliados/milagritos.png",
+    url: "https://www.facebook.com/people/Caf%C3%A9-Restaurante-Milagritos/100066489910653/",
+  },
 ];
 
 export default function WebHome() {
@@ -262,11 +287,35 @@ export default function WebHome() {
             <h2>Construimos junto a quienes mueven el ecosistema</h2>
           </div>
           <div className={styles.partnersGrid}>
-            {partners.map((p) => (
-              <div key={p} className={styles.partnerLogo}>
-                {p}
-              </div>
-            ))}
+            {partners.map((p) => {
+              const card = (
+                <div className={styles.partnerLogo}>
+                  <Image
+                    src={p.logo}
+                    alt={p.name}
+                    width={240}
+                    height={140}
+                    className={styles.partnerImg}
+                  />
+                </div>
+              );
+              return p.url ? (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.partnerLink}
+                  aria-label={p.name}
+                >
+                  {card}
+                </a>
+              ) : (
+                <div key={p.name} aria-label={p.name}>
+                  {card}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -53,6 +53,15 @@ export default function WebLayout({
             ))}
           </nav>
 
+          <a
+            href="https://bit.ly/MarketPlaceImpresion3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.headerMarketplace}
+          >
+            Marketplace 3D
+          </a>
+
           <Link href="/web/contacto" className={styles.headerCta}>
             Postula
           </Link>
@@ -99,7 +108,7 @@ export default function WebLayout({
             <h4>Contacto</h4>
             <a href="mailto:hola@wonkup.edu.pe">hola@wonkup.edu.pe</a>
             <a href="tel:+51922339108">+51 922 339 108</a>
-            <span>Av. Ferrocarril 378 — Segundo piso, Huancayo — Perú</span>
+            <span>Av. Ferrocarril 378 - 2° piso, Huancayo - Perú</span>
           </div>
         </div>
 

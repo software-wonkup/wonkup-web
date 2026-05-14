@@ -403,7 +403,8 @@
     grid-template-columns: 1fr;
     gap: 20px;
     @include m.tablet1 { grid-template-columns: repeat(2, 1fr); }
-    @include m.tablet3 { grid-template-columns: repeat(4, 1fr); }
+    @include m.tablet2 { grid-template-columns: repeat(3, 1fr); }
+    @include m.tablet3 { grid-template-columns: repeat(5, 1fr); }
 }
 .teamCard {
     background-color: v.$blanco;
@@ -449,24 +450,48 @@
     @include m.tablet1 { grid-template-columns: repeat(3, 1fr); }
     @include m.tablet3 { grid-template-columns: repeat(6, 1fr); }
 }
+.partnerLink {
+    display: block;
+    background: transparent;
+    padding: 0;
+    border-radius: 12px;
+    text-decoration: none;
+    &:hover {
+        background: transparent;
+    }
+}
 .partnerLogo {
-    height: 80px;
-    background-color: v.$blanco5;
+    height: 130px;
+    background-color: v.$blanco;
     border: 1px solid v.$blanco10;
     border-radius: 12px;
+    padding: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: v.$plomoOscuro;
-    font-weight: 700;
-    font-size: 13px;
+    overflow: hidden;
     transition: 200ms;
     &:hover {
-        background-color: v.$blanco;
         border-color: v.$principal;
-        color: v.$principal;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
         transition: 200ms;
+        .partnerImg {
+            filter: grayscale(0%);
+            opacity: 1;
+            transition: 200ms;
+        }
     }
+}
+.partnerImg {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    filter: grayscale(40%);
+    opacity: 0.85;
+    transition: 200ms;
 }
 
 /* ---------------- CTA ---------------- */

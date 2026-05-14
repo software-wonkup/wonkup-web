@@ -99,6 +99,30 @@
         transition: 200ms;
     }
 }
+.headerMarketplace {
+    display: none;
+    background-color: transparent;
+    color: v.$principal;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 18px;
+    border: 2px solid v.$principal;
+    border-radius: 999px;
+    text-decoration: none;
+    text-align: center;
+    transition: 200ms;
+    margin-right: 4px;
+    @include m.tablet1 {
+        display: inline-flex;
+        align-items: center;
+    }
+    &:hover {
+        background-color: v.$principal;
+        color: v.$blanco;
+        border-color: v.$principal;
+        transition: 200ms;
+    }
+}
 .headerCta {
     background-color: v.$principal;
     color: v.$blanco;
