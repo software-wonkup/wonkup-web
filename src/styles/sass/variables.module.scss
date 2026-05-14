@@ -1,0 +1,129 @@
+@use "sass:color";
+//FUENTES
+$fuentePrincipal: 'Overlock';
+
+//MEDIA QUERIES
+$celular: 300px;
+$tablet1: 600px;
+$tablet2: 800px;
+$tablet3: 1000px;
+$laptop: 1200px;
+$escritorio: 1400px;
+
+//BOTONES
+$editar: rgb(17, 188, 74);
+$eliminar: rgb(250, 86, 92);
+
+//BOTONES
+$campoObligatorio: rgb(213, 45, 59);
+
+//BOTONES
+$error: rgb(245, 65, 80);
+$blanco: rgba(255, 255, 255);
+$negro: rgba(27, 27, 27);
+$blanco5: color.mix($negro, $blanco, 5%);
+$blanco10: color.mix($negro, $blanco, 10%);
+$negro5: color.mix($blanco, $negro, 5%);
+$negro10: color.mix($blanco, $negro, 10%);
+$plomo: color.mix($negro, $blanco, 50%);
+$plomoClaro: color.mix($blanco, $plomo, 10%);
+$plomoOscuro: color.mix($negro, $plomo, 10%);
+$placeholder: rgb(176, 176, 176);
+
+// TODO: ---------------- COLORES ----------------
+$morado: rgb(89, 48, 121);  
+$morado10: color.mix($blanco, $morado, 10%);
+$verdeOliva: rgb(173, 183, 69);
+$celeste: rgb(79, 165, 220);
+$verdeEspuma: rgb(1, 195, 169);
+$verde: rgb(3, 169, 67);
+$rojo: rgb(254, 64, 80);
+$azulOscuro: rgb(68, 79, 233);
+$anaranjado: rgb(254, 184, 17);
+
+// TODO: ---------------- PRINCIPALES ----------------
+$principal: rgb(80, 168, 243);
+$principal20: color.mix($rojo, $principal, 20%);
+$secundario: rgb(241, 194, 45);
+$terciario: rgb(0, 149, 59);
+/* $fondo: color.mix($blanco, $principal, 80%); */
+$fondo: rgb(220, 220, 220);
+$principalPastel: rgb(251, 240, 189);
+$principalOscuro: rgb(224, 157, 0);
+$secundarioPastel: rgb(199, 144, 212);
+$secundarioOscuro: rgb(147, 12, 177);
+$terciarioPastel: rgb(109, 208, 196);
+$terciarioOscuro: rgb(7, 152, 135);
+
+// TODO: ---------------- PASTELES ----------------
+$moradoPastel: rgb(207, 174, 233);
+$verdeOlivaPastel: rgb(228, 230, 200);
+$celestePastel: rgb(199, 220, 233);
+$verdeEspumaPastel: rgb(202, 255, 250);
+$rojoPastel: rgb(255, 234, 220);
+$anaranjado: rgb(254, 184, 17);
+
+// TODO: ---------------- ROLES ----------------
+$superAdmin: rgb(236, 112, 56);
+$gerente: rgb(236, 112, 56);
+$cordinador: rgb(236, 112, 56);
+$alumno: $terciario;
+$apoderado: $terciario;
+$administrador: $rojo;
+$docente: $secundario;
+$cordinador: $azulOscuro;
+$gerencia: $principal;
+$secretaria: $celeste;
+//--Cambiarcolor
+$asesoria: rgb(173, 183, 69);
+$asesoriaPastel: rgb(250, 255, 196);
+//PERFILES O ROLES PASTELES
+$superAdminPastel: rgb(251, 217, 138);
+$administradorPastel: rgb(251, 217, 138);
+$adminPastel: rgb(146, 194, 224);
+$colaboradorPastel: rgb(146, 194, 224);
+$apoderadoPastel: rgb(146, 194, 224);
+$cordinadorPastel: rgb(79, 165, 220);
+$auxiliarPastel: rgb(79, 165, 220);
+$docentePastel: rgb(205, 250, 244);
+$alumnoPastel: rgb(250, 255, 196);
+
+
+$anaranjado: rgb(250, 120, 28);
+
+
+
+//PROYECTO GENERAL
+
+$principalHeader: rgb(53, 240, 78);
+$principalAside: rgb(53, 240, 78);
+$colorPrincipalGradiente1: rgb(26, 206, 251);
+$colorPrincipalGradiente2: rgb(50, 85, 255);
+$colorPrincipal: rgb(53, 240, 78);
+$colorPrincipalHover: rgb(176, 255, 80);
+$colorSecundario: rgb(59, 238, 181);
+$colorTerciario: rgb(159, 227, 65);
+
+$rojoHover: rgb(255, 64, 64);
+
+$sombra: rgb(207, 207, 207);
+//COLORES
+$verdeClaro: rgb(117, 252, 102);
+$verdeClaroGradiente: rgb(191, 255, 55);
+$verdeOscuro: rgb(46, 200, 11);
+$verdeOscuroGradiente: rgb(67, 250, 151);
+$azul: rgb(26, 13, 213);
+$azulClaro: rgb(10, 92, 224);
+$azulClaroGradiente: rgb(7, 168, 236);
+$azulOscuro: rgb(18, 7, 159);
+$azulOscuroGradiente: rgb(3, 51, 195);
+$negroMedio: rgb(90, 90, 90);
+$negroAzulado: rgb(22, 22, 23);
+$blancoOscuro: rgb(241, 241, 241);
+$amarillo: rgb(225 190 34);
+
+$turquesa: rgb(0, 149, 218);
+
+// ESTADOS
+$activo: $principal;
+$inactivo: rgb(250, 86, 92);

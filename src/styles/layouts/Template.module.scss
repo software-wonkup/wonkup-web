@@ -1,0 +1,22 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedor {
+    background-color: v.$blanco5;
+    padding: 10px;
+    border-radius: 10px;
+}
+.grid1_2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+.grid2_1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+.flex_c {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

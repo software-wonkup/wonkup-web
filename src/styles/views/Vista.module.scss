@@ -1,0 +1,353 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedor {
+    /* background-color: rgb(250, 250, 250); */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 8px v.$sombra ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .contenidos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cabecera,
+    .contenido {
+        background-color: v.$blanco;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1.2fr 2fr 2fr 1fr 3fr 80px 80px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        @include m.tablet2 {
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+        .botonEditar {
+            background-color: v.$editar;
+        }
+        .botonEliminar {
+            background-color: v.$eliminar;
+        }
+    }
+    .cabecera {
+        height: auto;
+        background-color: v.$terciario;
+        p {
+            font-weight: 900;
+            color: v.$blanco;
+            display: flex;
+            justify-content: left;
+        }
+    }
+    .contenido {
+        border: 1px solid v.$negro;
+        p {
+            display: flex;
+            text-align: left;
+        }
+        .numeroDocumento {
+            font-weight: 900;
+            color: v.$terciario;
+        }
+    }
+    .gridPrueba {
+        grid-template-columns: 2fr 1fr 1fr 1fr 80px 80px 80px;
+    }
+    .gridInscripcion {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 80px 80px;
+    }
+    .gridGrupo {
+        grid-template-columns: 1fr 1fr 50px 2fr 1fr 1fr 2fr 1fr 2fr 50px 80px 80px 30px;
+    }
+    .gridPrivado {
+        grid-template-columns: 1fr 1fr 2fr 3fr 80px 80px;
+    }
+    .gridClaseVer {
+        grid-template-columns: 150px 2.5fr 2.5fr 70px 60px 40px 1fr 1fr 1fr 2fr;
+        .alumno {
+            color: v.$secundario;
+            font-weight: 900;
+        }
+        .docente {
+            color: v.$terciario;
+            font-weight: 900;
+        }
+    }
+    .gridClasePrivadoVer {
+        grid-template-columns: 2fr 1fr 3fr 3fr 1fr;
+        .alumno {
+            color: v.$secundario;
+            font-weight: 900;
+        }
+        .docente {
+            color: v.$terciario;
+            font-weight: 900;
+        }
+    }
+    .gridClase {
+        grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 2fr 80px 40px 40px;
+        .estadoAsistio,
+        .estadoFalto,
+        .estadoTarde {
+            font-weight: 900;
+        }
+        .estadoAsistio {
+            color: v.$verde;
+        }
+        .estadoTarde {
+            color: orange;
+            font-weight: bold;
+        }
+        .estadoFalto {
+            color: v.$rojo;
+        }
+        button {
+            background-color: v.$blanco;
+            padding: 0px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .gridClaseDocente {
+        grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 2fr 80px 40px 40px;
+        .estadoAsistio,
+        .estadoFalto,
+        .estadoTarde {
+            font-weight: 900;
+        }
+        .estadoAsistio {
+            color: v.$verde;
+        }
+        .estadoTarde {
+            color: orange;
+            font-weight: bold;
+        }
+        .estadoFalto {
+            color: v.$rojo;
+        }
+        button {
+            background-color: v.$blanco;
+            padding: 0px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .gridNota {
+        grid-template-columns: 1fr 2fr;
+        .estadoAprobado {
+            color: v.$verde;
+        }
+        .estadoDesaprobado {
+            color: v.$rojo;
+        }
+        .ciclo {
+            color: v.$terciario;
+            font-weight: 900;
+        }
+    }
+    .gridNotaVer {
+        grid-template-columns: 6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 1fr 80px;
+    }
+    .gridMensualidad {
+        grid-template-columns: 60px 1fr 1fr 80px 1fr 2fr 40px;
+        .subNivel {
+            color: v.$terciario;
+            font-weight: 900;
+        }
+    }
+    .gridClaseDocente {
+        grid-template-columns: 1fr 1fr 3fr 80px 80px;
+    }
+    .gridClasePrivadoAlumno {
+        grid-template-columns: 1fr 1fr 3fr 80px 80px;
+    }
+    .gridClasePrivadoDocente {
+        grid-template-columns: 1fr 1fr 3fr 80px 80px;
+    }
+    .gridEgresoSecretaria {
+        grid-template-columns: 1fr 1fr 1fr 1fr 80px 80px;
+    }
+    .gridEgresoGerencia {
+        grid-template-columns: 1fr 1fr 1fr 1fr 80px 80px;
+    }
+    .gridEgresoOtro {
+        grid-template-columns: 90px 90px 90px 1fr 1fr 1fr 70px 70px;
+    }
+    .gridEgresoDocente {
+        grid-template-columns: 1fr 1fr 1fr 2fr 2fr 70px 70px;
+    }
+    .gridEgresoCordinador {
+        grid-template-columns: 1fr 1fr 1fr 1fr 80px 80px;
+    }
+    .gridIngresoMatricula {
+        grid-template-columns: 90px 90px 70px 1fr 1fr 80px 80px;
+    }
+    .gridIngresoLibro {
+        grid-template-columns: 90px 90px 70px 70px 1fr 1fr 80px 80px;
+    }
+    .gridIngresoMensualidad {
+        grid-template-columns: 40px 90px 90px 70px 1fr 1fr 70px 70px;
+    }
+    .gridIngresoServicio {
+        grid-template-columns: 90px 90px 70px 1.5fr 1fr 1.5fr 1.5fr 70px 70px;
+    }
+    .gridCajaIngreso {
+        grid-template-columns: 50px 2fr 1fr 80px 90px 1fr 1fr 2fr 1.5fr 60px;
+        gap: 5px;
+        p {
+            font-size: 13px;
+        }
+        .ingreso,
+        .totalIngreso {
+            color: v.$verde;
+            font-weight: 900;
+        }
+        .monto {
+            font-weight: 900;
+        }
+    }
+    .gridCajaEgreso {
+        grid-template-columns: 50px 2fr 1fr 1fr 80px 90px 1.5fr 1.5fr 0.5fr;
+        gap: 5px;
+        p {
+            font-size: 13px;
+        }
+        .egreso,
+        .totalEgreso {
+            color: v.$rojo;
+            font-weight: 900;
+        }
+        .monto {
+            font-weight: 900;
+        }
+    }
+    .gridPagoDocente {
+        grid-template-columns: 1fr 1fr 2fr 1fr 80px 80px;
+    }
+    .gridCiclo {
+        grid-template-columns: 60px 1fr 40px 1fr 1fr 1fr 2fr 1fr 2fr 40px 1fr 80px;
+    }
+    .gridCicloPasar {
+        grid-template-columns: 40px 2fr 1fr 1fr;
+    }
+    .gridCicloRecibido {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    .gridCicloParams {
+        grid-template-columns: 30px 2fr 1fr 1fr 1fr 1fr 160px;
+        border: solid 1.5px v.$terciario;
+        .punto {
+            width: 10px;
+            height: 10px;
+            background-color: v.$terciario;
+            border-radius: 5px;
+        }
+        .botonEditar {
+            background-color: v.$terciario;
+        }
+        .nombre {
+            color: v.$terciario;
+            font-weight: 900;
+        }
+        .estadoAprobado {
+            font-weight: 900;
+            color: v.$verde;
+        }
+        .estadoDesaprobado {
+            font-weight: 900;
+            color: v.$rojo;
+        }
+    }
+    .gridCrearCiclo {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr 1.5fr 120px;
+        .nombre {
+            font-weight: 900;
+            color: v.$terciario;
+        }
+    }
+    .gridCrearNota {
+        grid-template-columns: 2fr 1fr 1fr 0.5fr 1fr 1fr 1fr 1.5fr 1.5fr 120px;
+    }
+    .gridCrearGrupo {
+        grid-template-columns: 2fr 1fr 1fr 0.5fr 1fr 1fr 1fr 1.5fr 1.5fr 120px;
+        .nombre {
+            font-weight: 900;
+            color: v.$terciario;
+        }
+    }
+    .grid2 {
+        grid-template-columns: 40px 1fr 60px 60px;
+    }
+    .grid3 {
+        grid-template-columns: 40px 2fr 1fr 60px 60px;
+    }
+    .grid4 {
+        grid-template-columns: 40px 2fr 1fr 1fr 60px 60px;
+    }
+    .gridAlumno {
+        grid-template-columns: 1.2fr 2fr 2fr 1fr 3fr 80px 80px;
+    }
+}
+.contenidoCiclo {
+    /* width: 100%; */
+    box-shadow: none;
+    display: grid;
+    justify-content: flendex-;
+    /* align-items: flex-end; */
+    .contenidos {
+        width: 100%;
+        box-shadow: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: den;
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 229, 170, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .formAlumno{
+        width: 80%;
+    }
+    .caja{
+        width: 80%;
+    }
+}
+.contenedorPregunta {
+    h2 {
+        color: v.$blanco;
+        margin: 0 auto;
+    }
+    .numero {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .enunciado {
+        margin-bottom: 20px;
+    }
+    .claves {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 20px;
+    }
+    .botonEliminar {
+        width: 200px;
+        margin: 0 auto;
+        background-color: v.$rojo;
+    }
+}

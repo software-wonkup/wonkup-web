@@ -1,0 +1,52 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedor {
+    background-color: v.$blanco;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .cabecera,
+    .contenido {
+        padding: 4px;
+        border-radius: 6px;
+        border: 1px solid v.$verdeOliva;
+        display: grid;
+        grid-template-columns: 20px 2fr 1fr 60px 60px;
+        align-items: center;
+        gap: 10px;  
+        .botonEditar {
+            background-color: v.$editar;
+        }
+        .botonEliminar {
+            background-color: v.$eliminar;
+        }
+    }
+    .cabecera {
+        height: 24px;
+        background-color: v.$verdeOliva;
+        p {
+            color: v.$blanco;
+        }
+    }
+    .contenidos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(206, 154, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .div {
+        width: 240px;
+    }
+}

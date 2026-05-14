@@ -1,0 +1,84 @@
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+.formHorizontal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
+    .filtros {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        select {
+            color: v.$blanco;
+            font-size: 900;
+            background-color: v.$secundario;
+            :focus {
+                background-color: v.$secundario;
+            }
+            option {
+                background-color: v.$principal;
+                color: v.$blanco;
+            }
+        }
+    }
+    .sectionHorizontal {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        article {
+            width: 200px;
+        }
+    }
+}
+.formMenu {
+    padding: 10px 0px;
+    .filtroHorizontal {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .grupoId {
+        padding: 0px 20px;
+    }
+}
+.formMenu2 {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    .filtroHorizontal {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .grupoId {
+        padding: 0px 20px;
+    }
+    .cierre {
+        background-color: v.$secundario;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        p {
+            font-size: 20px;
+            color: v.$blanco;
+        }
+        span {
+            font-weight: 900;
+            color: v.$blanco;
+        }
+    }
+}
+.formFiltro {
+    padding: 10px 20px;
+    article {
+        width: 200px;
+    }
+}

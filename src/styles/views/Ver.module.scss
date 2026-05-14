@@ -1,0 +1,193 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedor {
+    height: 50vh;
+    width: 100%;
+    overflow-x: auto;
+    background-color: v.$blanco;
+    /* padding: 20px; */
+    /* border-radius: 20px; */
+    /* box-shadow: inset 0px 0px 8px v.$sombra; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include m.tablet2 {
+        margin: 30px auto;
+    }
+    .contenidos {
+        display: flex;
+        flex-direction: column;
+    }
+    .cabecera,
+    .contenido {
+        background-color: v.$blanco;
+        padding: 10px 20px;
+        border-radius: 0px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        @include m.tablet2 {
+            padding: 10px 15px;
+            border-radius: 0px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    .cabecera {
+        height: auto;
+        background-color: v.$principal;
+        p {
+            font-weight: 900;
+            color: v.$blanco;  
+        }
+    }
+    .contenido {
+        /* border: 1px solid v.$negro; */
+        .numeroDocumento {
+            font-weight: 900;
+            color: v.$terciario;
+        }
+        .acciones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+                img {
+                    width: 20px;
+                }
+        }
+        .activo, .inactivo {
+            color: v.$blanco;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .activo {
+            background-color: v.$activo;
+        }
+        .inactivo {
+            background-color: v.$inactivo;
+        }
+    }
+    .gridCliente {
+        grid-template-columns: 2fr 1fr 2fr 1fr 1fr;
+        min-width: 600px; 
+    }
+    .gridProveedor {
+        grid-template-columns: 2fr 1fr 2fr 1fr 1fr;
+        min-width: 600px; 
+    }
+    // TODO ---------------- INGRESO ---------------- //
+    .gridCategoria {
+        grid-template-columns: 1fr 2fr 0.8fr 0.8fr;
+        min-width: 600px; 
+    }
+    .gridAlmacen {
+        grid-template-columns: 1fr 2fr 0.8fr 0.8fr;
+        min-width: 600px; 
+    }
+    .gridStockProducto {
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+        min-width: 700px;
+    }
+    .gridMovimientoInventario {
+        grid-template-columns: 1fr 1fr 1.5fr 1.5fr 0.8fr 0.8fr 1.5fr;
+        min-width: 900px;
+    }
+    .gridProducto {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 1fr 1fr 1fr 1fr;
+        min-width: 800px; 
+    }
+    // TODO ---------------- INGRESO ---------------- //
+    .gridEmisor {
+        grid-template-columns: 2fr 1fr 2fr 1fr 1fr;
+        min-width: 600px; 
+    }
+    .gridEstablecimiento {
+        grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+        min-width: 600px; 
+    }
+    .gridSerie {
+        grid-template-columns: 1fr 2fr 2fr 2fr 1fr 1fr;
+        min-width: 600px; 
+    }
+    .gridComprobante {
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        img {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: v.$principal;
+            padding: 6px;
+            border-radius: 10px;
+        }
+    }
+    .gridCotizacion {
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        img {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: v.$principal;
+            padding: 6px;
+            border-radius: 10px;
+        }
+    }
+    .gridComprobanteGuia {
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+        img {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: v.$principal;
+            padding: 6px;
+            border-radius: 10px;
+        }
+    }
+    // TODO ---------------- CONFIGURACION ---------------- //
+    .gridInformacionPago {
+        display: grid;
+        grid-template-columns: 80px 1fr 3fr 1fr 1fr;
+    }
+    // TODO ---------------- OTROS ---------------- //
+    .gridMotivoMovimiento {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+    }
+    .gridMovimientoInventario {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .gridStockMinimo {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+    .gridComprobanteGuia {
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+        img {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: v.$principal;
+            padding: 6px;
+            border-radius: 10px;
+        }
+    }
+    .gridNotaVenta {
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+        img {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: v.$principal;
+            padding: 6px;
+            border-radius: 10px;
+        }
+    }
+    .gridTransaccion {
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+        img {
+            width: 35px !important;
+            height: 35px !important;
+            background-color: v.$principal;
+            padding: 6px;
+            border-radius: 10px;
+        }
+    }
+}

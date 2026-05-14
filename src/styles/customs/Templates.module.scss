@@ -1,0 +1,215 @@
+@use '../sass/mixins.module.scss' as m;
+@use '../sass/variables.module.scss' as v;
+.templates {
+    background-color: v.$blanco5;
+    padding: v.$paddingContenedorBase;
+    border-radius: v.$borderRadiusContenedorBase;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$gapContenedorBase;
+    @include m.celular {
+        padding: v.$paddingContenedorCelular;
+        border-radius: v.$borderRadiusContenedorCelular;
+        gap: v.$gapContenedorCelular;
+    }
+    @include m.tablet1 {
+        padding: v.$paddingContenedorTablet1;
+        border-radius: v.$borderRadiusContenedorTablet1;
+        gap: v.$gapContenedorTablet1;
+    }
+    @include m.tablet2 {
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;
+        gap: v.$gapContenedorTablet2;
+    }
+    @include m.tablet3 {
+        padding: v.$paddingContenedorTablet3;
+        border-radius: v.$borderRadiusContenedorTablet3;
+        grid-template-columns: 1fr 5fr;
+        gap: v.$gapContenedorTablet3;
+    }
+    @include m.laptop {
+        padding: v.$paddingContenedorLaptop;
+        border-radius: v.$borderRadiusContenedorLaptop;
+        gap: v.$gapContenedorLaptop;
+    }
+    /* form {
+
+    } */
+    .filtros {
+        display: flex;
+        flex-direction: column;
+        gap: v.$gapContenedorBase;
+        @include m.celular {
+            gap: v.$gapContenedorCelular;
+        }
+        @include m.tablet1 {
+            gap: v.$gapContenedorTablet1;
+        }
+        @include m.tablet2 {
+            gap: v.$gapContenedorTablet2;
+        }
+        @include m.tablet3 {
+            gap: v.$gapContenedorTablet3;
+        }
+        @include m.laptop {
+            gap: v.$gapContenedorLaptop;
+        }
+        /* .formularioBuscar {
+            button {
+                background-color: v.$verdeOliva;
+                padding: 4px;
+                margin: 0 auto;
+            }
+        } */
+        .contenedorInscripcionSecundarias {
+            display: flex;
+            flex-direction: column;
+            gap: v.$gapContenedorBase;
+            @include m.celular {
+                gap: v.$gapContenedorCelular;
+            }
+            @include m.tablet1 {
+                gap: v.$gapContenedorTablet1;
+            }
+            @include m.tablet2 {
+                gap: v.$gapContenedorTablet2;
+            }
+            @include m.tablet3 {
+                gap: v.$gapContenedorTablet3;
+            }
+            @include m.laptop {
+                gap: v.$gapContenedorLaptop;
+            }
+            h2 {
+                color: v.$verdeOliva;
+            }
+            .inscripcionSecundariasLista {
+                width: 100%;
+                max-width: calc(100vw - 48px);
+                white-space: nowrap;
+                overflow-x: auto;
+                scrollbar-width: none;
+                background-color: v.$blanco;
+                padding: v.$paddingContenedorBase;
+                border: 1px solid v.$plomo;
+                border-radius: v.$borderRadiusContenedorBase;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                gap: v.$gapContenedorBase;
+                @include m.celular {
+                    max-width: calc(100vw - 66px);
+                    padding: v.$paddingContenedorCelular;
+                    border-radius: v.$borderRadiusContenedorCelular;
+                    gap: v.$gapContenedorCelular;
+                }
+                @include m.tablet1 {
+                    max-width: calc(100vw - 84px);
+                    padding: v.$paddingContenedorTablet1;
+                    border-radius: v.$borderRadiusContenedorTablet1;
+                    flex-direction: column;
+                    gap: v.$gapContenedorTablet1;
+                }
+                @include m.tablet2 {
+                    max-width: calc(100vw - 102px);
+                    padding: v.$paddingContenedorTablet2;
+                    border-radius: v.$borderRadiusContenedorTablet2;
+                    gap: v.$gapContenedorTablet2;
+                }
+                @include m.tablet3 {
+                    grid-template-columns: 1fr;
+                    padding: v.$paddingContenedorTablet3;
+                    border-radius: v.$borderRadiusContenedorTablet3;
+                    gap: v.$gapContenedorTablet3;
+                }
+                @include m.laptop {
+                    padding: v.$paddingContenedorLaptop;
+                    border-radius: v.$borderRadiusContenedorLaptop;
+                    gap: v.$gapContenedorLaptop;
+                }
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .inscripcionSecundariaLista {
+                    width: 80px;
+                    background-color: v.$blanco;
+                    padding: v.$paddingContenedorBase;
+                    border: 2px solid v.$verdeOliva;
+                    border-radius: v.$borderRadiusContenedorBase;
+                    display: grid;
+                    grid-template-columns: 3fr 1fr;
+                    align-items: center;
+                    gap: v.$gapContenedorBase;
+                    @include m.celular {
+                        width: 100px;
+                        padding: v.$paddingContenedorCelular;
+                        border-radius: v.$borderRadiusContenedorCelular;
+                        flex-direction: column;
+                        gap: v.$gapContenedorCelular;
+                    }
+                    @include m.tablet1 {
+                        width: 120px;
+                        padding: v.$paddingContenedorTablet1;
+                        border-radius: v.$borderRadiusContenedorTablet1;
+                        gap: v.$gapContenedorTablet1;
+                    }
+                    @include m.tablet2 {
+                        width: 140px;
+                        padding: v.$paddingContenedorTablet2;
+                        border-radius: v.$borderRadiusContenedorTablet2;
+                        gap: v.$gapContenedorTablet2;
+                    }
+                    @include m.tablet3 {
+                        width: 100%;
+                        padding: v.$paddingContenedorTablet3;
+                        border-radius: v.$borderRadiusContenedorTablet3;
+                        gap: v.$gapContenedorTablet3;
+                    }
+                    @include m.laptop {
+                        padding: v.$paddingContenedorLaptop;
+                        border-radius: v.$borderRadiusContenedorLaptop;
+                        gap: v.$gapContenedorLaptop;
+                    }
+                    p {
+                        font-weight: 900;
+                    }
+                    span {
+                        font-weight: 900;
+                    }
+                    button {
+                        width: 16px;
+                        height: 16px;
+                        background-color: v.$verdeOliva;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include m.celular {
+                            width: 20px;
+                            height: 20px;
+                        }
+                        @include m.tablet1 {
+                            width: 24px;
+                            height: 24px;
+                        }
+                        @include m.tablet2 {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                    >:nth-child(2) {
+                        /* align-items: center; */
+                        /* .parrafos {
+                            
+                        } */
+                        >:nth-child(1) {
+                            display: none;
+                            /* display: flex;
+                            flex-direction: column;
+                            gap: 4px; */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

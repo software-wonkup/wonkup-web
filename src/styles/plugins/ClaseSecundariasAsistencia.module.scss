@@ -1,0 +1,43 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.formularioBuscar {
+    width: 200px;
+    margin-bottom: 20px;
+}
+.claseSecundarias {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    h4 {
+        margin: 0px;
+        padding: 0px;
+        line-height: 1;
+    }
+    .claseSecundaria {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid v.$principal;
+        display: flex;
+        flex-direction: column;
+        .informacion {
+            margin-bottom: 5px;
+            display: flex;
+                flex-direction: column;
+                gap: 10px;
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        button {
+            margin: 0 auto;
+            background-color: v.$principal;
+        }
+        span {
+            font-weight: 900;
+            color: v.$verdeOliva;
+        }
+    }
+}

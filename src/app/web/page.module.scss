@@ -1,0 +1,502 @@
+@use '@/styles/sass/variables.module.scss' as v;
+@use '@/styles/sass/mixins.module.scss' as m;
+
+.home {
+    width: 100%;
+    background-color: v.$blanco;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---------------- COMMON ---------------- */
+.eyebrow {
+    display: inline-block;
+    background-color: v.$principal;
+    color: v.$blanco;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.sectionHead {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+    h2 {
+        font-size: 28px;
+        font-weight: 900;
+        color: v.$negro;
+        line-height: 1.2;
+        margin-bottom: 14px;
+        @include m.tablet2 { font-size: 36px; }
+        @include m.tablet3 { font-size: 42px; }
+    }
+    p {
+        font-size: 16px;
+        color: v.$plomoOscuro;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+
+.btnPrimary {
+    display: inline-block;
+    background-color: v.$principal;
+    color: v.$blanco;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$secundario;
+        color: v.$negro;
+        transition: 200ms;
+    }
+}
+.btnGhost {
+    display: inline-block;
+    background-color: transparent;
+    color: v.$negro;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 26px;
+    border: 2px solid v.$negro;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$negro;
+        color: v.$blanco;
+        transition: 200ms;
+    }
+}
+.btnGhostDark {
+    display: inline-block;
+    background-color: transparent;
+    color: v.$blanco;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 26px;
+    border: 2px solid v.$blanco;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$blanco;
+        color: v.$negro;
+        transition: 200ms;
+    }
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    width: 100%;
+    background: linear-gradient(180deg, v.$blanco 0%, v.$blanco5 100%);
+    padding: 32px 0 60px;
+    overflow: hidden;
+    @include m.tablet2 { padding: 48px 0 90px; }
+}
+.heroBanner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+    @include m.tablet2 {
+        margin-bottom: 56px;
+        padding: 0 24px;
+    }
+    @include m.tablet3 {
+        margin-bottom: 72px;
+    }
+}
+.heroBannerImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    @include m.tablet2 { border-radius: 24px; }
+}
+.heroIntro {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    .eyebrow { margin-bottom: 0; }
+}
+.heroTitle {
+    font-size: 36px;
+    font-weight: 900;
+    color: v.$negro;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: -1px;
+    @include m.tablet1 { font-size: 44px; }
+    @include m.tablet2 { font-size: 54px; }
+    @include m.tablet3 { font-size: 60px; }
+    span {
+        color: v.$principal;
+        background: linear-gradient(120deg, v.$principal 0%, v.$secundario 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+.heroLead {
+    font-size: 17px;
+    color: v.$plomoOscuro;
+    line-height: 1.6;
+    max-width: 620px;
+    text-align: center;
+}
+.heroCtas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+.heroMeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid v.$blanco10;
+    width: 100%;
+    max-width: 620px;
+    @include m.tablet2 { gap: 48px; }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+    }
+    strong {
+        font-size: 28px;
+        font-weight: 900;
+        color: v.$negro;
+        @include m.tablet2 { font-size: 32px; }
+    }
+    span {
+        font-size: 13px;
+        color: v.$plomoOscuro;
+        font-weight: 500;
+    }
+}
+
+/* ---------------- FEATURES ---------------- */
+.features {
+    padding: 80px 0;
+    background-color: v.$blanco;
+}
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include m.tablet1 { grid-template-columns: repeat(2, 1fr); }
+    @include m.tablet3 { grid-template-columns: repeat(4, 1fr); }
+}
+.featureCard {
+    background-color: v.$blanco;
+    border: 1px solid v.$blanco10;
+    padding: 28px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: 200ms;
+    &:hover {
+        transform: translateY(-4px);
+        border-color: v.$principal;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+        transition: 200ms;
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: 800;
+        color: v.$negro;
+        text-align: left;
+    }
+    p {
+        font-size: 14px;
+        color: v.$plomoOscuro;
+        line-height: 1.5;
+    }
+}
+.featureIcon {
+    width: 52px;
+    height: 52px;
+    background-color: v.$blanco5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+/* ---------------- PROGRAMS ---------------- */
+.programs {
+    padding: 80px 0;
+    background-color: v.$blanco5;
+}
+.programsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include m.tablet1 { grid-template-columns: repeat(2, 1fr); }
+    @include m.tablet3 { grid-template-columns: repeat(4, 1fr); }
+}
+.programCard {
+    background-color: v.$blanco;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid v.$blanco10;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: 200ms;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, v.$principal, v.$secundario);
+    }
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        transition: 200ms;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 900;
+        color: v.$negro;
+        text-align: left;
+    }
+    p {
+        font-size: 14px;
+        color: v.$plomoOscuro;
+        line-height: 1.5;
+        flex: 1;
+    }
+}
+.programTag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 900;
+    color: v.$principal;
+    letter-spacing: 2px;
+}
+.programFoot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid v.$blanco10;
+    span {
+        font-size: 12px;
+        color: v.$plomoOscuro;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    a {
+        background: transparent;
+        color: v.$principal;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 0;
+        text-decoration: none;
+        &:hover {
+            color: v.$secundario;
+            background: transparent;
+        }
+    }
+}
+
+/* ---------------- STATS ---------------- */
+.stats {
+    padding: 60px 0;
+    background-color: v.$negro;
+}
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    @include m.tablet2 { grid-template-columns: repeat(4, 1fr); }
+}
+.statCard {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    align-items: center;
+    strong {
+        font-size: 36px;
+        font-weight: 900;
+        color: v.$secundario;
+        @include m.tablet2 { font-size: 48px; }
+    }
+    span {
+        font-size: 13px;
+        color: v.$blanco;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+    }
+}
+
+/* ---------------- VERTICALS ---------------- */
+.verticals {
+    padding: 80px 0;
+    background-color: v.$blanco;
+}
+.verticalsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+.verticalChip {
+    background-color: v.$blanco5;
+    color: v.$negro;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1px solid v.$blanco10;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$principal;
+        color: v.$blanco;
+        border-color: v.$principal;
+        transition: 200ms;
+    }
+}
+
+/* ---------------- TEAM ---------------- */
+.team {
+    padding: 80px 0;
+    background-color: v.$blanco5;
+}
+.teamGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include m.tablet1 { grid-template-columns: repeat(2, 1fr); }
+    @include m.tablet3 { grid-template-columns: repeat(4, 1fr); }
+}
+.teamCard {
+    background-color: v.$blanco;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    h4 {
+        font-size: 17px;
+        font-weight: 800;
+        color: v.$negro;
+    }
+    p {
+        font-size: 13px;
+        color: v.$plomoOscuro;
+        font-weight: 600;
+    }
+}
+.teamPhoto {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, v.$principal, v.$secundario);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+    }
+}
+
+/* ---------------- PARTNERS ---------------- */
+.partners {
+    padding: 80px 0;
+    background-color: v.$blanco;
+}
+.partnersGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    @include m.tablet1 { grid-template-columns: repeat(3, 1fr); }
+    @include m.tablet3 { grid-template-columns: repeat(6, 1fr); }
+}
+.partnerLogo {
+    height: 80px;
+    background-color: v.$blanco5;
+    border: 1px solid v.$blanco10;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: v.$plomoOscuro;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$blanco;
+        border-color: v.$principal;
+        color: v.$principal;
+        transition: 200ms;
+    }
+}
+
+/* ---------------- CTA ---------------- */
+.ctaSection {
+    padding: 80px 24px;
+    background: linear-gradient(135deg, v.$principal 0%, v.$secundario 100%);
+    text-align: center;
+}
+.ctaInner {
+    max-width: 720px;
+    margin: 0 auto;
+    h2 {
+        font-size: 28px;
+        font-weight: 900;
+        color: v.$blanco;
+        margin-bottom: 14px;
+        line-height: 1.2;
+        @include m.tablet2 { font-size: 38px; }
+    }
+    p {
+        font-size: 17px;
+        color: v.$blanco;
+        margin-bottom: 28px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+.ctaButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}

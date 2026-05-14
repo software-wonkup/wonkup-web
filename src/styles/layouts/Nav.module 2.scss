@@ -1,0 +1,48 @@
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+.nav3 {
+    width: 100%;
+    max-width: calc(100vw - 44px);
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background-color: v.$blanco;
+    padding: v.$paddingContenedorBase;
+    border-radius: v.$borderRadiusContenedorBase;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: v.$gapContenedorBase;
+    @include m.celular {
+        max-width: calc(100vw - 58px);
+        padding: v.$paddingContenedorCelular;
+        border-radius: v.$borderRadiusContenedorCelular;
+        gap: v.$gapContenedorCelular;
+    }
+    @include m.tablet1 {
+        max-width: calc(100vw - 72px);
+        padding: v.$paddingContenedorTablet1;
+        border-radius: v.$borderRadiusContenedorTablet1;
+        gap: v.$gapContenedorTablet1;
+    }
+    @include m.tablet2 {
+        max-width: calc(100vw - 86px);
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;
+        gap: v.$gapContenedorTablet2;
+    }
+    @include m.tablet3 {
+        max-width: calc(100vw - 100px);
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;
+        gap: v.$gapContenedorTablet3;
+    }
+    @include m.laptop {
+        max-width: calc(100vw - 140px);
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;
+        gap: v.$gapContenedorLaptop;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

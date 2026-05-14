@@ -1,0 +1,70 @@
+@use '../sass/mixins.module.scss' as m;
+@use '../sass/variables.module.scss' as v;
+.form {
+    width: 100%;
+    height: min-content;
+    margin: 0 auto;
+    padding: 20px 10px;
+    gap: 20px;
+    @include m.celular {
+        width: 95%;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    @include m.tablet1 {
+        width: 90%;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+    @include m.tablet2 {
+        padding: 20px;
+    }
+    @include m.tablet3 {
+        padding: 20px;
+    }
+    @include m.laptop {
+        width: 360px;
+        padding: 40px 20px;
+    }
+    .titulo {
+        display: grid;
+        gap: 20px;
+        h2 {
+            font-size: 20px;
+            color: v.$verdeOliva;
+            @include m.celular {
+                font-size: 28px;
+            }
+            @include m.tablet1 {
+                font-size: 36px;
+            }
+            @include m.tablet2 {
+                font-size: 20px;
+            }
+            @include m.tablet3 {
+                font-size: 28px;
+            }
+            @include m.laptop {
+                font-size: 36px;
+            }
+        }
+        img {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    fieldset {
+        section {
+            div {
+                display: grid;
+                gap: 12px;
+                article {
+                    gap: 4px;
+                    input {
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,202 @@
+@use '@/styles/sass/variables.module.scss' as v;
+@use '@/styles/sass/mixins.module.scss' as m;
+
+.page { width: 100%; background-color: v.$blanco; }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.eyebrow {
+    display: inline-block;
+    background-color: v.$blanco;
+    color: v.$principal;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+/* HERO */
+.hero {
+    padding: 90px 0 60px;
+    background: linear-gradient(135deg, v.$principal 0%, v.$secundario 100%);
+    color: v.$blanco;
+    text-align: center;
+    h1 {
+        font-size: 32px;
+        font-weight: 900;
+        color: v.$blanco;
+        line-height: 1.15;
+        max-width: 820px;
+        margin: 0 auto 16px;
+        @include m.tablet1 { font-size: 42px; }
+        @include m.tablet2 { font-size: 50px; }
+    }
+    p {
+        font-size: 17px;
+        color: v.$blanco;
+        line-height: 1.6;
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* BODY */
+.body { padding: 80px 0; background-color: v.$blanco; }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: flex-start;
+    @include m.tablet3 {
+        grid-template-columns: 1fr 1.4fr;
+        gap: 48px;
+    }
+}
+
+/* INFO */
+.info {
+    background-color: v.$blanco5;
+    padding: 32px;
+    border-radius: 16px;
+    height: auto;
+    overflow: visible;
+    margin: 0;
+    h2 {
+        font-size: 24px;
+        font-weight: 900;
+        color: v.$negro;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    > p {
+        font-size: 15px;
+        color: v.$plomoOscuro;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+}
+.infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 0;
+        border-bottom: 1px solid v.$blanco10;
+        &:last-child { border-bottom: none; }
+        a, span {
+            background: transparent;
+            color: v.$negro;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+        }
+        a:hover { color: v.$principal; background: transparent; }
+    }
+}
+.label {
+    color: v.$plomoOscuro !important;
+    font-size: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800 !important;
+}
+
+/* FORM */
+.formWrap {
+    background-color: v.$blanco;
+    border-radius: 16px;
+    border: 1px solid v.$blanco10;
+    overflow: hidden;
+}
+.contactForm {
+    background-color: v.$blanco;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h3 {
+        font-size: 22px;
+        font-weight: 900;
+        color: v.$negro;
+        text-align: left;
+        margin-bottom: 6px;
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 700;
+        color: v.$negro;
+        text-transform: none;
+    }
+    input, select, textarea {
+        width: 100%;
+        background-color: v.$blanco;
+        color: v.$negro;
+        border: 1px solid v.$blanco10;
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 14px;
+        font-weight: 500;
+        &:focus, &:focus-visible {
+            border: 2px solid v.$principal;
+            background-color: v.$blanco;
+            outline: none;
+        }
+        &::placeholder {
+            color: v.$plomo;
+            font-weight: 400;
+        }
+    }
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+        font-family: inherit;
+    }
+}
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    @include m.tablet1 { grid-template-columns: 1fr 1fr; gap: 14px; }
+}
+.submit {
+    width: auto;
+    align-self: flex-start;
+    background-color: v.$principal;
+    color: v.$blanco;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$secundario;
+        color: v.$negro;
+        transition: 200ms;
+    }
+}
+.disclaimer {
+    font-size: 12px;
+    color: v.$plomoOscuro;
+    line-height: 1.5;
+    margin-top: 4px;
+}

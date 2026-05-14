@@ -1,0 +1,111 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.claseSecundarias {
+    display: grid;
+    gap: 5px;
+    .cabeceraClaseSecundaria,
+    .claseSecundaria {
+        height: auto;
+        background-color: v.$blanco;
+        padding: 5px 10px;
+        border: 1px solid v.$negro;
+        border-radius: 5px;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 16px 80px 140px 200px 1fr 1.8fr 1.2fr 90px 70px 50px;
+        align-items: center;
+        p {
+            line-height: 1;
+        }
+        a {
+            width: 100%;
+            height: 20px;
+            color: v.$blanco;
+            line-height: 1;
+            padding: 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background-color: v.$morado;
+                transition: 800ms;
+            }  
+        }
+        .horaClases {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .horaClase {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+        }
+        .botonCorreo,
+        .botonWhatsapp {
+            width: 100%;
+            background-color: v.$blanco;
+            margin: 0px auto;
+            padding: 0px;
+            img {
+                margin: 0px auto;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .botonEliminar {
+            width: 20px;
+            height: 20px;
+            line-height: 1;
+            background-color: v.$eliminar;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background-color: v.$morado;
+                transition: 800ms;
+            } 
+            p {
+                font-size: 10px;
+                font-weight: 700;
+                line-height: 1;
+                color: v.$blanco;
+            }
+        }
+        .editar {
+            background-color: v.$verdeEspuma;
+        }
+        .estadoDictado {
+            color: v.$celeste;
+            font-weight: 900;
+        }
+        .estadoAsistio {
+            color: v.$verdeEspuma;
+            font-weight: 900;
+        }
+        .estadoFalto {
+            color: v.$rojo;
+            font-weight: 900;
+        }
+        .estadoProgramado {
+            color: v.$principal;
+            font-weight: 900;
+        }
+        .estadoReprogramado {
+            color: v.$apoderado;
+            font-weight: 900;
+        }
+    }
+    .cabeceraClaseSecundaria {
+        background-color: v.$verdeOliva;
+        p {
+            color: v.$blanco;
+            font-weight: 900;
+        };
+        .horaCabecera {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

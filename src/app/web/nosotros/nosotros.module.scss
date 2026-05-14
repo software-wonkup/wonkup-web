@@ -1,0 +1,249 @@
+@use '@/styles/sass/variables.module.scss' as v;
+@use '@/styles/sass/mixins.module.scss' as m;
+
+.page { width: 100%; background-color: v.$blanco; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.eyebrow {
+    display: inline-block;
+    background-color: v.$blanco;
+    color: v.$principal;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+.eyebrowDark {
+    display: inline-block;
+    background-color: v.$principal;
+    color: v.$blanco;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.head {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+    h2 {
+        font-size: 30px;
+        font-weight: 900;
+        color: v.$negro;
+        line-height: 1.2;
+        @include m.tablet2 { font-size: 38px; }
+    }
+}
+
+/* HERO */
+.hero {
+    padding: 90px 0 60px;
+    background: linear-gradient(135deg, v.$principal 0%, v.$secundario 100%);
+    color: v.$blanco;
+    text-align: center;
+    h1 {
+        font-size: 32px;
+        font-weight: 900;
+        color: v.$blanco;
+        line-height: 1.15;
+        max-width: 820px;
+        margin: 0 auto 16px;
+        letter-spacing: -0.5px;
+        @include m.tablet1 { font-size: 40px; }
+        @include m.tablet2 { font-size: 50px; }
+    }
+}
+.lead {
+    font-size: 17px;
+    color: v.$blanco;
+    line-height: 1.6;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* STORY */
+.story { padding: 80px 0; background-color: v.$blanco; }
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    @include m.tablet3 { grid-template-columns: 1fr 1fr; gap: 60px; }
+}
+.storyCopy {
+    h2 {
+        font-size: 28px;
+        font-weight: 900;
+        color: v.$negro;
+        line-height: 1.2;
+        margin-bottom: 18px;
+        text-align: left;
+        @include m.tablet2 { font-size: 34px; }
+    }
+    p {
+        font-size: 16px;
+        color: v.$plomoOscuro;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+}
+.storyArt {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+    line-height: 0;
+}
+.storyImg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* MISSION */
+.mission { padding: 60px 0; background-color: v.$blanco5; }
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include m.tablet1 { grid-template-columns: repeat(2, 1fr); }
+    article {
+        background-color: v.$blanco;
+        padding: 32px;
+        border-radius: 16px;
+        border-top: 4px solid v.$principal;
+        h3 {
+            font-size: 22px;
+            font-weight: 900;
+            color: v.$principal;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 16px;
+            color: v.$plomoOscuro;
+            line-height: 1.6;
+        }
+        &:nth-child(2) { border-top-color: v.$secundario; h3 { color: v.$secundario; } }
+    }
+}
+
+/* VALUES */
+.values { padding: 80px 0; background-color: v.$blanco; }
+.valuesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include m.tablet1 { grid-template-columns: repeat(2, 1fr); }
+    @include m.tablet3 { grid-template-columns: repeat(4, 1fr); }
+}
+.valueCard {
+    background-color: v.$blanco5;
+    padding: 24px;
+    border-radius: 14px;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$principal;
+        transition: 200ms;
+        h4 { color: v.$blanco; }
+        p { color: v.$blanco; }
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 900;
+        color: v.$negro;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 14px;
+        color: v.$plomoOscuro;
+        line-height: 1.5;
+    }
+}
+
+/* TIMELINE */
+.timeline { padding: 80px 0; background-color: v.$blanco5; }
+.timelineList {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.timelineItem {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: v.$blanco;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid v.$principal;
+    @include m.tablet1 { grid-template-columns: 100px 1fr; gap: 28px; }
+    h4 {
+        font-size: 18px;
+        font-weight: 800;
+        color: v.$negro;
+        text-align: left;
+        margin-bottom: 4px;
+    }
+    p {
+        font-size: 14px;
+        color: v.$plomoOscuro;
+        line-height: 1.5;
+    }
+}
+.year {
+    font-size: 24px;
+    font-weight: 900;
+    color: v.$principal;
+    @include m.tablet1 { font-size: 28px; }
+}
+
+/* CTA */
+.cta {
+    padding: 70px 24px;
+    background-color: v.$negro;
+    text-align: center;
+}
+.ctaInner {
+    max-width: 720px;
+    margin: 0 auto;
+    h2 {
+        font-size: 26px;
+        font-weight: 900;
+        color: v.$blanco;
+        margin-bottom: 24px;
+        line-height: 1.2;
+        @include m.tablet2 { font-size: 34px; }
+    }
+}
+.ctaBtn {
+    display: inline-block;
+    background-color: v.$principal;
+    color: v.$blanco;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$secundario;
+        color: v.$negro;
+        transition: 200ms;
+    }
+}

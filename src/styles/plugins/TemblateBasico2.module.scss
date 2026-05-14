@@ -1,0 +1,6 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

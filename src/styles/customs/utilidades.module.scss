@@ -1,0 +1,23 @@
+@use '../sass/mixins.module.scss' as m;
+@use '../sass/variables.module.scss' as v;
+.verProducto {
+    @include m.mw (200px); 
+    text-transform: uppercase;
+    margin: 0 auto;
+    border: 2px solid v.$anaranjado;
+    &:hover {
+        color: v.$blanco;
+        background-color: v.$anaranjado;
+    }
+}
+.path {
+    background-color: v.$anaranjado;
+}
+
+.h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: v.$anaranjado;
+    padding: 40px 0;
+}

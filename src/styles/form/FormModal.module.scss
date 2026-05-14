@@ -1,0 +1,11 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedorBoton {
+    .botonCancelar {
+        background-color: v.$eliminar;
+        &:hover {
+            background-color: v.$secundario;
+            transition: 800ms;
+        }
+    }
+}

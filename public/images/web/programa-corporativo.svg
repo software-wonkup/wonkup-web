@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#50a8f3"/>
+
+  <!-- decoration dots -->
+  <g fill="#fff" opacity="0.5">
+    <circle cx="65" cy="55" r="4"/>
+    <circle cx="100" cy="35" r="2.5"/>
+    <circle cx="345" cy="45" r="4"/>
+    <circle cx="55" cy="240" r="3"/>
+    <circle cx="350" cy="245" r="3"/>
+  </g>
+
+  <!-- Left building (yellow, shorter) -->
+  <g>
+    <rect x="75" y="130" width="105" height="150" fill="#f1c22d"/>
+    <!-- windows -->
+    <g fill="#1d1d1b">
+      <rect x="90"  y="148" width="18" height="18"/>
+      <rect x="118" y="148" width="18" height="18"/>
+      <rect x="146" y="148" width="18" height="18"/>
+      <rect x="90"  y="176" width="18" height="18"/>
+      <rect x="118" y="176" width="18" height="18"/>
+      <rect x="146" y="176" width="18" height="18"/>
+      <rect x="90"  y="204" width="18" height="18"/>
+      <rect x="146" y="204" width="18" height="18"/>
+      <!-- door -->
+      <rect x="118" y="232" width="18" height="48"/>
+    </g>
+  </g>
+
+  <!-- Right building (white, taller) -->
+  <g>
+    <rect x="220" y="80" width="105" height="200" fill="#fff"/>
+    <g fill="#1d1d1b">
+      <rect x="235" y="100" width="18" height="18"/>
+      <rect x="263" y="100" width="18" height="18"/>
+      <rect x="291" y="100" width="18" height="18"/>
+      <rect x="235" y="128" width="18" height="18"/>
+      <rect x="291" y="128" width="18" height="18"/>
+      <rect x="235" y="156" width="18" height="18"/>
+      <rect x="263" y="156" width="18" height="18"/>
+      <rect x="291" y="156" width="18" height="18"/>
+      <rect x="235" y="184" width="18" height="18"/>
+      <rect x="263" y="184" width="18" height="18"/>
+      <rect x="291" y="184" width="18" height="18"/>
+      <rect x="235" y="212" width="18" height="18"/>
+      <rect x="291" y="212" width="18" height="18"/>
+      <!-- door -->
+      <rect x="263" y="232" width="18" height="48"/>
+    </g>
+  </g>
+
+  <!-- Yellow lightning bolt (innovation) between buildings -->
+  <path d="M198 110 L182 158 L196 158 L188 200 L210 152 L196 152 L204 110 Z" fill="#f1c22d" stroke="#1d1d1b" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- ground line -->
+  <line x1="40" y1="280" x2="360" y2="280" stroke="#1d1d1b" stroke-width="3" opacity="0.35"/>
+</svg>

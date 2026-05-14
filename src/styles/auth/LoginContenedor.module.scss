@@ -1,0 +1,63 @@
+@use '../sass/mixins.module.scss' as m;
+@use '../sass/variables.module.scss' as v;
+.contenedor {
+    height: 100vh;
+    background-color: v.$blanco5;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 20px;
+    @include m.celular {
+        padding: 20px;
+    }
+    @include m.tablet1 {
+        padding: 30px;
+    }
+    @include m.tablet2 {
+        padding: 40px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    @include m.tablet3 {
+        padding: 50px;
+        grid-template-columns: 1fr;
+    }
+    @include m.laptop {
+        padding: 50px 100px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .contenedorImagen {
+        display: none;
+        @include m.tablet2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        h2 {
+            @include m.tablet2 {
+                font-size: 20px;
+            }
+            @include m.tablet3 {
+                font-size: 25px;
+            }
+            @include m.laptop {
+                font-size: 30px;
+            }
+        }
+        img {
+            @include m.tablet2 {
+                border-radius: 8px;
+            }
+            @include m.tablet3 {
+                border-radius: 12px;
+            }
+            @include m.laptop {
+                max-width: 600px;
+                border-radius: 16px;
+            }
+        }
+    }
+ }

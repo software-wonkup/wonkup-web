@@ -1,0 +1,63 @@
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+.layout3 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    @include m.tablet1 {
+        gap: 10px;
+    }
+    @include m.tablet2 {
+        gap: 15px;
+    }
+}
+.layoutPrincipal {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: v.$fondo;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    .cuerpo {
+        display: grid;
+        grid-template-columns: 50px auto;
+        @include m.celular{
+            grid-template-columns: 60px auto;
+        }
+        @include m.tablet1 {
+            grid-template-columns: 70px auto;
+        }
+        @include m.tablet2 {
+            grid-template-columns: 80px auto;
+        }
+        @include m.tablet3 {
+            grid-template-columns: 160px auto;
+        }
+        @include m.laptop {
+            grid-template-columns: 300px auto;
+        }
+         .contenido {
+            height: calc(100vh - 90px);
+            padding: 10px;
+            overflow-y: auto; 
+            @include m.celular {
+                padding: 10px;
+            }
+            @include m.tablet1 {
+                padding: 12px;
+            }
+            @include m.tablet2 {
+                padding: 14px;
+            }
+            @include m.tablet3 {
+                padding: 14px;
+            }
+            @include m.laptop {
+                padding: 16px;
+            }
+            &::-webkit-scrollbar {
+                display: none;
+            }
+         }  
+    }
+}

@@ -1,0 +1,95 @@
+@use './variables.module.scss' as v;
+//MEDIAS QUERY
+@mixin celular {
+    @media (min-width: v.$celular){
+        @content;
+    }
+}
+@mixin tablet1 {
+    @media (min-width: v.$tablet1){
+        @content;
+    }
+}
+@mixin tablet2 {
+    @media (min-width: v.$tablet2){
+        @content;
+    }
+}
+@mixin tablet3 {
+    @media (min-width: v.$tablet3){
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: v.$laptop){
+        @content;
+    }
+}
+@mixin escritorio {
+    @media (min-width: v.$escritorio){
+        @content;
+    }
+}
+//MEDIA
+@mixin media ($te, $ta, $l) {
+    @media (min-width: v.$celular){
+        max-width: 90%;
+        margin: 0 auto;
+        @content;
+    }
+    @media (min-width: v.$tablet){
+        max-width: 95%;
+        margin: 0 auto;
+        @content;
+    }
+    @media (min-width: v.$laptop){
+        max-width: 1200px;
+        margin: 0 auto;
+        @content;
+    }
+}
+//ENLACE HOVER
+@mixin grid($c,$f,$gc,$gf) {
+    display: grid;
+    grid-template-columns: repeat($c, 1fr);
+    grid-template-rows: repeat($f, 1fr);
+    column-gap: $gc;
+    row-gap: $gf;
+}
+//GRID
+@mixin grid($c,$f,$gc,$gf) {
+    display: grid;
+    grid-template-columns: repeat($c, 1fr);
+    grid-template-rows: repeat($f, 1fr);
+    column-gap: $gc;
+    row-gap: $gf;
+}
+//REDUCIR CODIGO
+@mixin mw($w) {
+    max-width: $w;
+    margin: 0 auto;
+}
+//BOTONES
+@mixin bt2($fs,$fw,$p,$w,$c1,$bc1,$c2,$bc2) {
+    font-size: $fs;
+    font-weight: $fw;
+    padding: $p;
+    width: $w;    
+    border: none;
+    color: $c1;
+    background-color: $bc1;
+    &:hover{
+        color: $c2;
+        background-color: $bc2;
+    }
+}
+@mixin bt1($fs,$fw,$p,$w,$c1,$bc1) {
+    font-size: $fs;
+    font-weight: $fw;
+    padding: $p;
+    width: $w;    
+    border: none;
+    color: $c1;
+    background-color: $bc1;
+}
+

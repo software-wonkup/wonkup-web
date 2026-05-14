@@ -1,0 +1,35 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 229, 170, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .caja{
+        width: 90%;
+        @include m.tablet1 {
+            width: 80%;
+        }
+        @include m.tablet2 {
+            width: 70%;
+        }
+        @include m.tablet3 {
+            width: 60%;
+        }
+        @include m.laptop {
+            width: 50%;
+        }
+    }
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
+    .botonCancelar {
+        background-color: v.$rojo;
+    }
+}

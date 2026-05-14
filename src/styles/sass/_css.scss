@@ -1,0 +1,263 @@
+/* 
+ORDEN DE LAS PROPIEDADES
+1. Posicionamiento
+2. Dimenciones: w y h
+3. Tipografia: color, tex.aligin, font-size, font.w
+4. Fondo y borde
+5. Espaciado: margin y pading
+6. Diseño de caja: flex, grid
+7. Animaciones y transformaciones
+8. Otros: cursor
+
+EL MIO
+1. Dimenciones
+2. Texto
+3. Color
+4. Margin, pading, borde
+5. Disposición
+6. Hover y efectos
+7. Media query
+8. Sub etiquetas
+
+-ESTRUCTUTA 
+El nombre que se le da es un selector
+Lo que va dentro de las llaves es la propiedad
+Y la propiedad tiene valor
+declaracion es prpiedad mas valor
+Unidad es el px
+
+-PARA QUE TOME TODO EL ANCHP
+height: 100vh;
+        
+-PARA QUE APAREZCA LA BARRA DE MOVIMIENTO
+overflow-y: scroll;
+
+-ESTILOS EN ENPUT
+input{
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid v.$blanco_oscuro;
+    &::placeholder{
+        color: v.$blanco_oscuro;
+    }
+    &:focus{
+        border: 0.2rem solid v.$blanco_oscuro;
+    }
+    &:focus-visible{
+        outline: none;
+        border: 0.2rem solid v.$anaranjado;
+    }
+} 
+
+-ZOMBRA
+.elemento {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+-ANCHO DE BLOQUE
+width: 100PX;
+max-width: 120rem;//Toma el maximo entre el 100% de la pantall y lo designado
+
+-ALTURA DE BLOQUE
+height: 100PX;
+-MARGIN
+margin-top: 5rem;
+margin: 5rem;
+margin: 5rem 2rem 3rem 4rem;
+
+-PADDING
+padding-top: 5rem;
+padding: 5rem;
+padding: 5rem 2rem 3rem 4rem;
+-PADDING
+
+-COLOR DE FONDO
+background-color: rgb(235, 226, 69);
+
+-GRADIENTE
+//background: linear-gradient(to direccion, colorInicial porcentajedepantallComenzara, colorFinal termina,;
+//background: linear-gradient(to right, black 50%, red 100%);
+
+-IMAGENES CSS: Tiene que tener ancho y altura definida
+background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / .7)), url('../../../public/img/header.jpg');
+background-image: url('../../../public/img/header.jpg');
+background-position: center;
+background-size: cover;
+
+-COLOR DE TEXTO
+color: rgb(235, 226, 69);
+-GROZOR DE TEXTO O NEGRITA
+font-weight: 700;
+
+TRANSFORMAR TEXTO
+text-transform: capitalize;//Las iniciales en mayuscula
+text-transform: uppercase;//mayuscula
+ text-transform: lowercase;//minuscula
+ 
+-BORDES
+border-width: 20px;//Ancho del borde
+border-style: solid;//Tipo de borde
+border-color: blueviolet;//Color de borde
+border: 0.1rem solid #fff;//3 propiedades
+border-bottom: 0.1rem solid #fff;
+border-bottom-style: solid;
+
+-BORDER RADIUS
+border-bottom-right-radius: 1rem;
+-TAMAÑO DE FUENTE
+font-size: 16px;
+-TIPO DE FUENTE
+font-family: v.$fuente_principal;
+-ALINEAR TEXTO
+text-align: center;
+
+-DISPLAY FLEX
+flex-direction: row;
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+align-items: flex-end;
+align-items: flex-start;
+align-items: center;
+justify-content: center;//Alinea al centro los bloques hijos
+justify-content: flex-start;//Alinea a la izquierda los bloques hijos
+justify-content: flex-end;//Alinea a la derecha los bloques hijos
+justify-content: space-around;/*Los extremos y la pared estan separados un poco y los demas separados mas
+justify-content: space-between;//Los extremos van junto a la pared y los demas separados igualmente
+
+-SELECCIONAR HIJO SEGUN SU POSICION
+div:nth-child(4)
+div:nth-child(2n)
+:first-child//primero
+:last-child//ultimo
+
+----SELECCIONAR HIJO DIRECTO
+.productos {
+    >:nth-child(1) {
+        background-color: red;
+    }
+    >:nth-child(2) {
+        background-color: blue;
+    }
+}
+
+
+-TIPOS DE POCER CSS
+Modulos: Anidacion
+
+
+-TIPOS DE COLORES
+Hexadecimal
+#ffffff
+RGB
+rgb(255 255 255 / 0.5)//Para la opacidad
+HSL
+
+VALORES DE ESPECIFIDAD
+1000: important
+100:id
+10: clases
+1: generales
+
+CSS PARA IMAGEN
+background-image: url(../);
+background-repeat: no-repeat;//Para que la imagen no se repita
+background-size: cover;//Para que se estire y tome todo el ancho disponible
+background-position: center center;//Para que se ubique que se enfoque al centro
+
+-OBJECT-FIT: Para desbordamiento de imagenes
+he: 10px;
+w: 100%;
+object-fit: cover;
+
+.HERENCIA
+div > a{
+    Selecciona todos los hijos directos
+}
+
+SELECCIONAR INPUTS EN ESPESIFICO
+.input[type='text'], .input[type='text']{
+}
+COLOR DE IMPUT PLACEHOLDR
+&::placeholder{
+    color: v.$plomo;
+}
+SELECCIONAR TODOS MENOS LA DE UN TIPO
+.input:not([type='text']){
+}
+
+CORTAR LINEAS DE TEXTO
+.descripcion2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+ANIAMR IMAGEN
+.imagenEntrada {
+    width: 200px;
+    height: auto;
+    display: none;
+    @include m.tablet {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    animation-name: mostrarImagen;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    @keyframes mostrarImagen {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+TRANSITION
+transition: color .3s ease out
+*/
+
+
+
+
+/* PENDIENTE
+Como hacer degradados con imagenes sin usar la propiedad bacgrnd-image
+Como hacer que un bloque en react tome todo la altura con overflow scrol h crreen
+*/
+
+/* HTML
+Inputs tipos
+-text
+-email
+-number
+-radio: Solo te deja seleccionar 1
+-checkbox: Puedes seleccionar varios
+-list??: A diferencia del select puedes buscar la opcion con el nombre
+
+PROPIEDADES DE LOS INPUTS
+-required
+
+Propiedades de option
+-disable: Para que no se seleccion
+-select: Para que se seleccione por defecto
+
+*/
+
+
+
+li{
+    display: flex;
+    background: linear-gradient(to right, black 50%, red 100%);
+}

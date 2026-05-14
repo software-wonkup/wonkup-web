@@ -1,0 +1,65 @@
+//IMPORTACIONES
+@use 'variables' as v;
+@use 'mixins' as m;
+//Grid 1x2 de diferentes proporciones
+.grid1 {
+    @include m.mw (90%);
+    display: grid;
+    gap: 1rem;
+    @include m.tablet {
+        @include m.mw (95%);
+        grid-template-columns: 2fr 3fr;; 
+    }
+    @include m.laptop {
+        @include m.mw (1200px);
+    }
+}
+//Contenedor formulario
+.contenedorFormulario {
+    h2 {
+        padding: 0;
+    }
+    .descripcion {
+        margin: 1rem 0;
+    }
+}
+//Formularios
+.form1{
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem v.$sombra;
+    .campo {
+        margin-bottom: 1rem;
+    }
+    .campo:last-child {
+        margin-bottom: 0
+    }
+    label{
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    input{
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        font-weight: 400;
+        color: v.$negro;
+        background-color: v.$blanco;
+        margin: 0;
+        padding: 0.5rem;
+        border: 0.2rem solid v.$plomo;
+        border-radius: 0.5rem;
+        &::placeholder{
+            color: v.$plomoOscuro;
+        }
+        &:focus{
+            border: 0.2rem solid v.$colorPrincipal;
+        }
+        &:focus-visible{
+            outline: none;
+            border: 0.2rem solid v.$colorPrincipal;
+        }
+    } 
+}

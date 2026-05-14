@@ -1,0 +1,104 @@
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+
+/* =====================================================
+   LAYOUT GENERAL
+===================================================== */
+
+.layoutPrincipal {
+  width: 100%;
+  background-color: v.$fondo;
+  font-size: 16px;
+}
+
+/* =====================================================
+   MOBILE FIRST ( < 800px )
+===================================================== */
+
+.cuerpo {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Botón visible en mobile */
+.menuButton {
+    width: 60px;
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: v.$principal;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Aside animado */
+.asideWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1200;
+  background: white;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.15);
+  @include m.tablet2 {
+    z-index: 0;
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  /* background: rgba(0,0,0,0.5); */
+  z-index: 1150;
+}
+
+/* Main */
+.main {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* =====================================================
+   DESKTOP >= 800px (tablet2)
+===================================================== */
+
+@include m.tablet2 {
+
+  .cuerpo {
+    grid-template-columns: 300px auto;
+  }
+
+  /* Ocultamos botón */
+  .menuButton {
+    display: none;
+  }
+
+  /* Aside vuelve al flujo normal */
+  .asideWrapper {
+    position: relative;
+    transform: translateX(0);
+    height: auto;
+    width: 300px;
+    box-shadow: none;
+  }
+
+  /* No overlay */
+  .overlay {
+    display: none;
+  }
+}

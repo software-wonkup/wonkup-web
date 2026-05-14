@@ -1,0 +1,264 @@
+@use '@/styles/sass/variables.module.scss' as v;
+@use '@/styles/sass/mixins.module.scss' as m;
+
+.site {
+    width: 100%;
+    min-height: 100vh;
+    background-color: v.$blanco;
+    color: v.$negro;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- TOPBAR ---------------- */
+.topbar {
+    width: 100%;
+    background-color: v.$negro;
+    color: v.$blanco;
+    font-size: 12px;
+    display: none;
+    @include m.tablet2 {
+        display: block;
+    }
+}
+.topbarInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: v.$blanco;
+    span {
+        color: v.$blanco;
+        font-size: 12px;
+    }
+}
+
+/* ---------------- HEADER ---------------- */
+.site .header {
+    width: 100%;
+    height: auto;
+    background-color: v.$blanco;
+    border-bottom: 1px solid v.$blanco10;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: block;
+}
+.headerInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    padding: 0;
+    color: v.$negro;
+    text-decoration: none;
+    &:hover { background: transparent; }
+}
+.brandLogo {
+    width: auto;
+    height: 36px;
+    display: block;
+    @include m.tablet2 { height: 40px; }
+}
+.nav {
+    display: none;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    padding: 0;
+    @include m.tablet2 {
+        display: flex;
+    }
+}
+.navLink {
+    background: transparent;
+    color: v.$negro;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$blanco5;
+        color: v.$principal;
+        transition: 200ms;
+    }
+}
+.headerCta {
+    background-color: v.$principal;
+    color: v.$blanco;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover {
+        background-color: v.$secundario;
+        color: v.$negro;
+        transition: 200ms;
+    }
+}
+
+/* ---------------- MAIN ---------------- */
+.main {
+    flex: 1;
+    width: 100%;
+    background-color: v.$blanco;
+}
+
+/* ---------------- FOOTER ---------------- */
+.site .footer {
+    width: 100%;
+    background-color: v.$negro;
+    border-top: none;
+    padding: 0;
+    display: block;
+    overflow: visible;
+    color: v.$blanco;
+}
+.footerInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    @include m.tablet1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include m.tablet3 {
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    }
+}
+.footerCol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h4 {
+        font-size: 14px;
+        font-weight: 800;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: v.$secundario;
+        margin-bottom: 6px;
+    }
+    a, span {
+        font-size: 14px;
+        color: v.$blanco;
+        background: transparent;
+        padding: 0;
+        text-align: left;
+        text-decoration: none;
+        font-weight: 400;
+        display: block;
+    }
+    a:hover {
+        color: v.$principal;
+        background: transparent;
+    }
+}
+.footerBrand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    background: transparent;
+    margin-bottom: 6px;
+    &:hover { background: transparent; }
+    .brandLogo { height: 42px; }
+}
+.footerTagline {
+    font-size: 14px;
+    color: v.$blanco10;
+    line-height: 1.5;
+    max-width: 320px;
+}
+.footerEndorsement {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid v.$negro5;
+    @include m.tablet1 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.endorsementLabel {
+    color: v.$plomoClaro;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.endorsementLogo {
+    background-color: v.$blanco;
+    border-radius: 10px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+    img {
+        height: 38px;
+        width: auto;
+        display: block;
+    }
+}
+
+.footerBottom {
+    border-top: 1px solid v.$negro5;
+    padding: 20px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: v.$plomoClaro;
+    @include m.tablet1 {
+        flex-direction: row;
+    }
+    span {
+        color: v.$plomoClaro;
+    }
+}
+.legal {
+    display: flex;
+    gap: 16px;
+    background: transparent;
+    a {
+        background: transparent;
+        color: v.$plomoClaro;
+        font-size: 13px;
+        padding: 0;
+        font-weight: 500;
+        text-decoration: none;
+        &:hover {
+            color: v.$principal;
+            background: transparent;
+        }
+    }
+}

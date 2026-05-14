@@ -1,0 +1,6 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedorFormularios {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}

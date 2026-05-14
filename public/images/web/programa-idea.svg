@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#f1c22d"/>
+
+  <!-- Rays around bulb -->
+  <g stroke="#1d1d1b" stroke-width="4" stroke-linecap="round" opacity="0.55">
+    <line x1="200" y1="20" x2="200" y2="55"/>
+    <line x1="115" y1="55" x2="135" y2="80"/>
+    <line x1="285" y1="55" x2="265" y2="80"/>
+    <line x1="60" y1="135" x2="100" y2="135"/>
+    <line x1="340" y1="135" x2="300" y2="135"/>
+  </g>
+
+  <!-- Bulb -->
+  <g transform="translate(200 155)">
+    <!-- glass -->
+    <circle cx="0" cy="-30" r="62" fill="#fff"/>
+    <!-- filament -->
+    <path d="M-18 -28 Q0 -8 18 -28" stroke="#f1c22d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="0" cy="-30" r="6" fill="#f1c22d"/>
+    <!-- base -->
+    <rect x="-26" y="32" width="52" height="18" rx="4" fill="#50a8f3"/>
+    <rect x="-22" y="52" width="44" height="14" rx="4" fill="#50a8f3"/>
+    <rect x="-16" y="68" width="32" height="8" rx="4" fill="#1d1d1b"/>
+  </g>
+
+  <!-- Decorative dots -->
+  <g fill="#1d1d1b" opacity="0.35">
+    <circle cx="60" cy="240" r="4"/>
+    <circle cx="340" cy="250" r="4"/>
+    <circle cx="80" cy="270" r="3"/>
+  </g>
+</svg>

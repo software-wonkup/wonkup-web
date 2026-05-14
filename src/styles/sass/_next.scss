@@ -1,0 +1,21 @@
+/* 
+Orden de importacionas
+1. EXTERNAS: useState, useEfect
+2. HOJAS DE ESTILOS
+
+MIO POR AHORA
+1. EXTERNOS
+2. DEL MISMO NEXT
+3. HOJAS D E ESTILOS
+4 COMPONENTES
+
+ROUTER DINAMICO
+1° Importa lo siguiente en el componente donde se esta ejecutando el map
+'use client': para que no te genre problemas
+2° Importar el hok de router
+import { useRouter } from "next/navigation"
+3° En el div que sale por cada iteraccion incluir un onclick y ahi poner a que direccion te mada cuando haces click
+4° Crear la carpeta y subcarpeta donde estaran los diferentes enlaces
+5° En el jsx de la carpeta creada nuevamente importr
+'use client' y el import { useParams } from "next/navigation"
+*/

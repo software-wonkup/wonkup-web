@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#f1c22d"/>
+
+  <!-- stars / particles -->
+  <g fill="#1d1d1b">
+    <circle cx="60" cy="60" r="3"/>
+    <circle cx="110" cy="120" r="2"/>
+    <circle cx="340" cy="80" r="3"/>
+    <circle cx="320" cy="40" r="2"/>
+    <circle cx="370" cy="160" r="2"/>
+  </g>
+
+  <!-- motion lines (left side) -->
+  <g stroke="#1d1d1b" stroke-width="4" stroke-linecap="round" opacity="0.4">
+    <line x1="55" y1="250" x2="95" y2="220"/>
+    <line x1="45" y1="200" x2="85" y2="170"/>
+    <line x1="100" y1="280" x2="130" y2="260"/>
+  </g>
+
+  <!-- Rocket angled up-right -->
+  <g transform="translate(220 150) rotate(25)">
+    <!-- body -->
+    <path d="M0 -85 C12 -85 28 -55 28 -10 L28 70 L-28 70 L-28 -10 C-28 -55 -12 -85 0 -85 Z" fill="#50a8f3"/>
+    <!-- window -->
+    <circle cx="0" cy="-30" r="12" fill="#fff"/>
+    <!-- fins -->
+    <path d="M-28 35 L-50 65 L-28 65 Z" fill="#50a8f3"/>
+    <path d="M28 35 L50 65 L28 65 Z" fill="#50a8f3"/>
+    <!-- flame -->
+    <path d="M-16 70 L-10 102 L0 84 L10 102 L16 70 Z" fill="#fff"/>
+  </g>
+
+  <!-- ascending bars (growth chart) -->
+  <g fill="#1d1d1b">
+    <rect x="60" y="260" width="20" height="20" rx="2"/>
+    <rect x="90" y="245" width="20" height="35" rx="2"/>
+    <rect x="120" y="225" width="20" height="55" rx="2"/>
+  </g>
+</svg>

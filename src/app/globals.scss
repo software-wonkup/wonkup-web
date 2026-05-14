@@ -1,0 +1,938 @@
+//IMPORTACION DE VARIABLES
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+html {
+    box-sizing: border-box; /* Asegura que todos los elementos hereden border-box */
+  }
+//PARA TODO ARCHIVO
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+#__next-build-watcher {
+  display: none !important;
+}
+#__vercel {
+  display: none !important;
+}
+[data-nextjs-dev-tools-button="true"] {
+  display: none !important;
+}
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-family: var(--font-oswald), system-ui, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, label, input, select, option, textarea, button, div, section, article, form, fieldset{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    white-space: normal
+}
+/* h1, h2, h3, h4, h5, h6, p {
+    white-space: normal
+} */
+h1, h2, h3, h4, h5, h6, p, a, ul, ol{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+    padding: 0;
+    color: v.$negro;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+    text-align: center;
+}
+a, p, button, img, label, input{
+    display: block;
+}
+h1 {
+    font-size: 16px;
+    @include m.celular {
+        font-size: 18px;
+    }
+    @include m.tablet1 {
+        font-size: 20px;
+    }
+    @include m.tablet2 {
+        font-size: 22px;
+    }
+    @include m.tablet3 {
+        font-size: 24px;
+    }
+    @include m.laptop {
+        font-size: 24px;
+    }
+}
+h2 {
+    font-size: 14px;
+    @include m.celular {
+        font-size: 16px;
+    }
+    @include m.tablet1 {
+        font-size: 18px;
+    }
+    @include m.tablet2 {
+        font-size: 20px;
+    }
+    @include m.tablet3 {
+        font-size: 22px;
+    }
+    @include m.laptop {
+        font-size: 22px;
+    }
+}
+h3 {
+    font-size: 13px;
+    @include m.celular {
+        font-size: 17px;
+    }
+    @include m.tablet1 {
+        font-size: 18px;
+    }
+    @include m.tablet2 {
+        font-size: 19px;
+    }
+    @include m.tablet3 {
+        font-size: 19px;
+    }
+    @include m.laptop {
+        font-size: 19px;
+    }
+}
+h4 {
+    font-size: 12px;
+    @include m.celular {
+        font-size: 16px;
+    }
+    @include m.tablet1 {
+        font-size: 17px;
+    }
+    @include m.tablet2 {
+        font-size: 18px;
+    }
+    @include m.tablet3 {
+        font-size: 18px;
+    }
+    @include m.laptop {
+        font-size: 18px;
+    }
+}
+h5 {
+    font-size: 11px;
+    @include m.celular {
+        font-size: 15px;
+    }
+    @include m.tablet1 {
+        font-size: 16px;
+    }
+    @include m.tablet2 {
+        font-size: 17px;
+    }
+    @include m.tablet3 {
+        font-size: 17px;
+    }
+    @include m.laptop {
+        font-size: 17px;
+    }
+}
+h6 {
+    font-size: 10px;
+    @include m.celular {
+        font-size: 14px;
+    }
+    @include m.tablet1 {
+        font-size: 15px
+    }
+    @include m.tablet2 {
+        font-size: 16px;
+    }
+    @include m.tablet3 {
+        font-size: 16px;
+    }
+    @include m.laptop {
+        font-size: 16px;
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+}
+a{
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: v.$blanco;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+b, a, p, label, input, select, button, textarea {
+    font-size: 14px;
+    line-height: 1;
+    @include m.celular {
+        font-size: 14px;
+    }
+    @include m.tablet1 {
+        font-size: 14px;
+    }
+    @include m.tablet2 {
+        font-size: 14px;
+    }
+    @include m.tablet3 {
+        font-size: 15px;
+    }
+    @include m.laptop {
+        font-size: 15px;
+    }
+}
+label {
+    color: v.$negro10;
+    font-weight: 500;
+}
+main {
+    background-color: v.$fondo;
+}
+b {
+    color: v.$error;
+}
+button {
+    width: 100%;
+    height: auto;
+    font-weight: 700;
+    color: v.$blanco;
+    background-color: v.$principal;
+    padding: 4px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: v.$secundario;
+        transition: 800ms;
+    } 
+    @include m.celular {
+        border-radius: 0px;
+    }
+    @include m.tablet1 {
+        border-radius: 0px;
+    }
+    @include m.tablet2 {
+        border-radius: 0px;
+    }
+    @include m.tablet3 {
+        border-radius: 0px;
+    }
+    @include m.laptop {
+        border-radius: 0px;
+    }
+}
+//Poner en utilidades
+/* nav{
+    padding: 5px 0;
+    @include m.tablet2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    a{
+        @include m.mw (95%);  
+        &:hover {
+            color: v.$negro;
+            background: linear-gradient(to right, v.$colorPrincipalGradiente1 0%, v.$colorPrincipalGradiente2 100%);
+            transition: 1000ms;
+        } 
+        @include m.tablet2 {
+            width: 100%;
+        }
+    }
+} */
+header {
+    height: 70px;
+    background-color: v.$blanco;
+    padding: 0px 20px;
+    border-bottom: 2px solid v.$fondo;
+    /* border-radius: 0px 0px 12px 12px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    b {
+        a {
+            background-color: v.$blanco;
+            display: flex;
+            padding: 0px;
+            align-items: center;
+            gap: 5px;
+            img {
+                /* width: 40px; */
+                height: 40px;
+            }
+            p {
+                color: v.$principal;
+                display: none;
+                @include m.celular {
+                    display: flex;
+                }
+            }
+        }
+    }
+    section {
+        display: flex;
+        /* align-items: center; */
+        gap: 8px;
+        a {
+            width: 40px;
+            height: 40px;
+            background-color: v.$blanco;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 32px;
+                height: auto;
+                border-radius: 4px;
+            }
+        }
+        nav {
+            height: 40px;
+            background-color: v.$principal;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            @include m.tablet2 {
+                flex-direction: row;
+                gap: 10px;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+            a {
+                background-color: v.$blanco;
+                width: 40px;
+                height: 40px;
+                padding: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                p{
+                    color: v.$principal;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                &:hover {
+                    background-color: v.$principal;  
+                    transition: 800ms ;
+                    p {
+                        color: v.$secundario;
+                        transition: 800ms ;
+                    }
+                } 
+                @include m.tablet2 {
+                    width: 150px;
+                }
+                img {
+                    display: none;
+                    @include m.tablet3 {
+                        display: block;
+                    }
+                }
+            }
+        }
+        button {
+            width: 60px;
+            height: 40px;
+            background-color: v.$principal20;
+            padding: 4px;
+            border-radius: 0px;
+            &:hover {
+                background-color: v.$rojo;  
+                transition: 800ms ;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+aside {   
+    overflow-y: auto; 
+    height: calc(100vh - 0px);
+    margin: 0px 0px;
+    background-color: v.$terciario;
+    border-radius: 0px;
+    @include m.celular {
+        /* padding: 8px 0px; */
+    }
+    @include m.tablet1 {
+        /* padding: 6px 0px; */
+    }
+    @include m.tablet2 {
+        /* padding: 8px 0px; */
+    }
+    @include m.laptop {
+        /* padding: 0px 0px; */
+    }
+    section {
+        background-color: v.$principal;
+        /* margin-bottom: 20px; */
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        a {
+            padding: 4px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include m.laptop {
+                width: 100%;
+                /* height: 120px; */
+                padding: 6px;
+                border-radius: 12px;
+            }
+            img {
+                width: 100%;
+                padding: 0px;
+                border-radius: 3px;
+                @include m.laptop {
+                    border-radius: 10px;
+                }
+            }
+        }
+        p {
+            font-size: 11px;
+            font-weight: 700;
+            text-align: center;
+            color: v.$negro;
+            @include m.laptop {
+                font-size: 16px;
+            }
+        }
+        b {
+            font-size: 10px;
+            font-weight: 900;
+            color: v.$blanco;
+            @include m.celular {
+                font-size: 10px;
+            }
+            @include m.tablet1 {
+                font-size: 11px;
+            }
+            @include m.tablet2 {
+                font-size: 14px;
+            }
+            @include m.tablet3 {
+                font-size: 14x;
+            }
+            @include m.laptop {
+                font-size: 15px;
+            }
+            @include m.escritorio {
+                font-size: 16px;
+            }
+        }
+    }
+    nav{
+        background-color: v.$terciario;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @include m.celular {
+            gap: 10px;
+        }
+        @include m.tablet1 {
+            gap: 10px;
+        }
+        @include m.tablet2 {
+            gap: 10px;
+        }
+        @include m.tablet3 {
+            gap: 6px;
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+            @include m.celular {
+                gap: 4px;
+            }
+            a {
+                width: 100%;
+                color: v.$blanco;
+                background-color: v.$terciario;
+                padding: 4px;
+                display: flex;
+                gap: 2px;
+                justify-content: flex-start;
+                align-items: center;
+                @include m.celular {
+                    padding: 4px;
+                    gap: 4px;
+                }
+                @include m.tablet1 {
+                    padding: 4px;
+                    gap: 6px;
+                }
+                @include m.tablet2 {
+                    padding: 4px;
+                    gap: 8px;
+                }
+                @include m.tablet3 {
+                    padding: 6px;
+                }
+                &:hover {
+                    background-color: v.$principal;  
+                    transition: 800ms ;
+                    @include m.tablet3 {
+                        background-color: v.$principal;  
+                    }
+                    p {
+                        color: v.$blanco;
+                        transition: 800ms ;
+                    }
+                }  
+                p {
+                    font-size: 15px;
+                    color: v.$blanco;
+                    @include m.tablet1 {
+                        font-size: 16px;
+                    }
+                    @include m.tablet2 {
+                        font-size: 17px;
+                    }
+                    @include m.tablet1 {
+                        font-size: 18px;
+                    }
+                }
+                img {
+                    width: 40px;
+                    height: auto;
+                    margin-left: 10px;
+                    @include m.celular {
+                        width: 40px;
+                        height: auto;
+                    }
+                    @include m.tablet1 {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    @include m.tablet2 {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+            // Contendor de subEnlace
+            div {
+                a {
+                    width: 100%;
+                    color: v.$blanco;
+                    background-color: v.$terciario;
+                    padding: 10px;
+                    /* border-radius: 2px; */
+                    display: flex;
+                    &:hover {
+                        background-color: v.$principal;  
+                        transition: 800ms ;
+                    }  
+                    @include m.celular {
+                        /* border-radius: 4px; */
+                    }
+                    p {
+                        width: 100%;
+                        font-size: 14px;
+                        text-align: left;
+                        color: v.$blanco;
+                        @include m.celular {
+                            font-size: 14px;
+                        }
+                        @include m.tablet1 {
+                            font-size: 15px;
+                        }
+                        @include m.tablet2 {
+                            font-size: 15px;
+                        }
+                        @include m.tablet3 {
+                            font-size: 15px;
+                        }
+                        @include m.laptop {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+footer {    
+    overflow-x: auto; 
+    width: 100vv;
+    /* height: 36px; */
+    background-color: v.$principal;
+    border-top: 2px solid v.$fondo;
+    padding: 3px;
+    display: flex;
+    @include m.celular {
+        padding: 6px;
+    }
+    @include m.tablet1 {
+        padding: 6px;
+    }
+    @include m.tablet2 {
+        padding: 6px;
+    }
+    @include m.tablet3 {
+        padding: 6px;
+    }
+    @include m.laptop {
+        padding: 6px;
+    }
+    p, h2, h4 {
+        color: v.$blanco;
+    }
+    nav {
+        background-color: v.$principal;
+        display: flex;
+        margin: 0 auto;
+        gap: 2px;
+        @include m.celular {
+            gap: 4px;
+        }
+        @include m.tablet1 {
+            gap: 6px;
+        }
+        @include m.tablet2 {
+            gap: 8px;
+        }
+        @include m.tablet3 {
+            gap: 10px;
+        }
+        @include m.laptop {
+            gap: 12px;
+        } 
+        a {
+            width: 60px;
+            color: v.$blanco;
+            background-color: v.$secundario;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include m.celular {
+                width: 70px;
+            }
+            @include m.tablet1 {
+                width: 80px;
+            }
+            @include m.tablet2 {
+                width: 90px;
+            }
+            @include m.tablet3 {
+                width: 100px;
+            }
+            @include m.laptop {
+                width: 100px;
+            }
+            &:hover {
+                color: v.$blanco;
+                transition: 800ms;
+                background-color: v.$secundario;
+                transition: 800ms;
+            } 
+        }
+    }
+    /* .version {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        p {
+            font-size: 12px;
+            font-weight: 900;
+            color: v.$blanco;
+        }
+    } */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+input, select, textarea {
+    width: 100%;
+    color: v.$plomo;
+    border-color: v.$plomo;
+    background-color: v.$blanco;
+    padding: 2px;
+    border: 1px solid v.$plomo;
+    border-radius: 0px;
+    cursor: pointer;
+    @include m.celular {
+        padding: 3px;
+        border-radius: 0px;
+    }
+    @include m.tablet1 {
+        padding: 4px;
+        border-radius: 0px;
+    }
+    @include m.tablet2 {
+        padding: 5px;
+        border-radius: 0px;
+    }
+    @include m.tablet3 {
+        padding: 6px;
+        border-radius: 0px;
+    }
+    @include m.laptop {
+        padding: 6px;
+        border-radius: 0px;
+    }
+    &::placeholder{ 
+        font-size: 14px;
+        font-weight: 100;
+        color: v.$plomoOscuro;
+        @include m.celular {
+            font-size: 14px;
+        }
+        @include m.tablet1 {
+            font-size: 14px;
+        }
+        @include m.tablet2 {
+            font-size: 14px;
+        }
+        @include m.tablet3 {
+            font-size: 15px;
+        }
+        @include m.laptop {
+            font-size: 15px;
+        }
+    }
+}
+input {
+    /* &:hover {
+        background-color: v.$principalPastel;
+        transition: 800ms;
+    } */
+    &:focus{
+        border: 2px solid v.$principal;
+    }
+    &:focus-visible{
+        background-color: v.$principalPastel;
+        outline: none;
+        border: 2px solid v.$principal;
+    }
+    &::placeholder{   
+        color: rgb(204, 204, 204);
+    }
+}
+select {
+    color: v.$negro;
+    border: solid 1px v.$plomo;
+    &::placeholder{   
+        font-weight: 100;
+        color: v.$plomo;
+    }
+    /* &:hover {
+        background-color: v.$principalPastel;
+        transition: 800ms;
+    } */
+    &:focus{
+        border: 2px solid v.$principal;
+        background-color: red;
+    }
+    &:focus-visible{
+        color: v.$negro;
+        background-color: v.$blanco;
+        outline: none;
+        border: 2px solid v.$principal;
+    }
+    option {
+        background-color: v.$blanco;
+        margin-top: 2px;
+        padding: 2px;
+        border-radius: 5px;
+        &:hover {
+            color: v.$blanco;
+            background-color: v.$principal;
+        }
+    }
+    option:checked {
+        margin-top: 2px;
+        padding: 2px;
+        border-radius: 5px;
+        color: v.$blanco;
+        background-color: v.$principal;
+    }
+}
+textarea {
+    &:focus{
+        border: 0.2px solid v.$colorPrincipal;
+    }
+    &:focus-visible{
+        color: v.$negro;
+        outline: none;
+        border: 2px solid v.$principal;
+        background-color: v.$blanco;
+    }
+    /* &:hover {
+        background-color: v.$principalPastel;
+        transition: 800ms;
+    } */
+}
+
+form{
+    background-color: v.$blanco;
+    padding: 4px;
+    border-radius: 0px;
+    /* box-shadow: inset 0px 0px 8px v.$sombra; */
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        input {
+            color: v.$negro10;
+        }
+    }
+    @include m.celular {
+        padding: 8px;
+        border-radius: 0px;
+        gap: 4px;
+    }
+    @include m.tablet1 {
+        padding: 12px;
+        border-radius: 0px;
+        gap: 6px;
+    }
+    @include m.tablet2 {
+        padding: 16px;
+        border-radius: 0px;
+        gap: 8px;
+    }
+    @include m.tablet3 {
+        padding: 20px;
+        border-radius: 0px;
+        gap: 10px;
+    }
+    @include m.laptop {
+        padding: 24px;
+        border-radius: 0px;
+        gap: 10px;
+    }
+    fieldset {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        @include m.celular {
+            gap: 4px;
+        }
+        @include m.tablet1 {
+            gap: 6px;
+        }
+        @include m.tablet2 {
+            gap: 8px;
+        }
+        @include m.tablet3 {
+            gap: 10px;
+        }
+        @include m.laptop {
+            gap: 10px;
+        }
+        section {
+            div {
+                display: grid;
+                column-gap: 2px;
+                row-gap: 2px;
+                @include m.celular {
+                    column-gap: 4px;
+                    row-gap: 4px;
+                }
+                @include m.tablet1 {
+                    column-gap: 6px;
+                    row-gap: 4px;
+                }
+                @include m.tablet2 {
+                    column-gap: 8px;
+                    row-gap: 4px;
+                }
+                @include m.tablet3 {
+                    column-gap: 10px;
+                    row-gap: 4px;
+                }
+                @include m.laptop {
+                    column-gap: 12px;
+                    row-gap: 4px;
+                }
+                article {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }  
+        }
+    }
+    span {
+        color: v.$campoObligatorio;
+    }
+    h5 {
+        font-size: 16px;
+        text-align: center;
+        color: v.$terciario;
+        @include m.tablet1 {
+            font-size: 18px;
+        }
+    }
+    h6 {
+        font-size: 14px;
+        text-align: center;
+        color: v.$terciario;
+        margin: 0 auto;
+        padding: 8px 0px;
+        @include m.tablet1 {
+            font-size: 16px;
+            text-align: left;
+        }
+        @include m.tablet2 {
+            font-size: 20px;
+        }
+    }
+    button {
+        width: 80px;
+        margin: 0 auto;
+        padding: 8px;
+        &:hover {
+            background-color: v.$terciario;
+            transition: 800ms;
+        }
+        @include m.celular {
+            width: 120px;
+        }
+        @include m.tablet1 {
+            width: 140px;
+        }
+        @include m.tablet2 {
+            width: 160px;
+        }
+        @include m.tablet3 {
+            width: 180px;
+        }
+        @include m.laptop {
+            width: 200px;
+        }
+    }
+}
+
+li{
+    list-style-type: none;
+}

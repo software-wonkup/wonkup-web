@@ -1,0 +1,53 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+.contenedor {
+    background-color: v.$blanco;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .cabecera,
+    .contenido {
+        padding: 10px;
+        border-radius: 10px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 80px;
+    }
+    .cabecera {
+        background-color: v.$verdeOliva;
+        p {
+            color: v.$blanco;
+        }
+    }
+    .contenidos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contenido {
+        border: 1px solid v.$verdeOliva;
+        .botonEliminar {
+            width: 100%;
+            height: 20px;
+            line-height: 1;
+            background-color: v.$eliminar;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background-color: v.$morado;
+                transition: 800ms;
+            } 
+            p {
+                font-size: 10px;
+                font-weight: 700;
+                line-height: 1;
+                color: v.$blanco;
+            }
+        }
+    }
+}

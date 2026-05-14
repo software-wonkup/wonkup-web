@@ -1,0 +1,152 @@
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+
+/* === Estilos base del calendario === */
+.react-calendar {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border: none;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: #333 !important;
+}
+
+/* === Encabezado === */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #0ca7d6;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #e6f8fd;
+}
+
+/* ======================================================
+   🔥 DÍAS DE LA SEMANA (DOM, LUN, MAR, ...)
+====================================================== */
+.react-calendar__month-view__weekdays {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  text-align: center !important;
+  text-transform: capitalize !important; /* Primera mayúscula */
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 6px 0;
+}
+
+/* Quitar subrayado feo por defecto */
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none !important;
+}
+
+/* ======================================================
+   🔥 FORZAR QUE LA GRILLA SIEMPRE SEA DE 7 COLUMNAS
+====================================================== */
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  gap: 6px !important;
+}
+
+/* ======================================================
+   🔥 ESTILOS DE LAS CELDAS
+====================================================== */
+.react-calendar__tile {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  /* Celdas cuadradas sin romper la tabla */
+  aspect-ratio: 1 / 1;
+
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #222;
+  transition: background 0.2s ease;
+  background-color: transparent;
+}
+
+/* Hover */
+.react-calendar__tile:hover {
+  background-color: #e0f4fc;
+  color: #0ca7d6;
+}
+
+/* Día actual */
+.react-calendar__tile--now {
+  background-color: #d2f1ff !important;
+  font-weight: bold;
+}
+
+/* Día seleccionado */
+.react-calendar__tile--active {
+  background-color: #0ca7d6 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* ======================================================
+   🔥 DÍAS DEL MES ANTERIOR / SIGUIENTE
+====================================================== */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #bcbcbc !important;
+  background-color: transparent !important;
+  opacity: 0.45;
+}
+
+/* ======================================================
+   🔥 FECHAS ESPECIALES
+====================================================== */
+
+/* Fechas personalizadas */
+.react-calendar__tile.marcada {
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+  font-weight: bold;
+  border: 2px solid #fbc02d !important;
+}
+
+/* Feriados */
+.react-calendar__tile.feriado {
+  background-color: #f44336 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* === Título del mes con primera letra mayúscula === */
+.react-calendar__navigation__label {
+  text-transform: none !important;   /* Elimina transformaciones previas */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0ca7d6;
+
+  /* Forzar primera mayúscula */
+  display: inline-block;
+}
+
+.react-calendar__navigation__label::first-letter {
+  text-transform: uppercase !important;
+}
+

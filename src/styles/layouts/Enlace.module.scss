@@ -1,0 +1,51 @@
+@use '../sass/mixins.module.scss' as m;
+@use '../sass/variables.module.scss' as v;
+.enlaceNav {
+    width: 60px;
+    font-size: 10px;
+    margin: 0 auto;
+    color: v.$blanco;
+    background-color: v.$principal20;
+    padding: v.$paddingContenedorBase;
+    border-radius: v.$borderRadiusContenedorBase;
+    @include m.celular {
+        width: 80px;
+        padding: v.$paddingContenedorCelular;
+        border-radius: v.$borderRadiusContenedorCelular;
+    }
+    @include m.tablet1 {
+        width: 100px;
+        font-size: 10px;
+        padding: v.$paddingContenedorTablet1;
+        border-radius: v.$borderRadiusContenedorTablet1;
+    }
+    @include m.tablet2 {
+        width: 120px;
+        font-size: 11px;
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;
+    }
+    @include m.tablet3 {
+        width: 140px;
+        font-size: 12px;
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;;
+    }
+    @include m.laptop {
+        width: 140px;
+        font-size: 12px;
+        padding: v.$paddingContenedorTablet2;
+        border-radius: v.$borderRadiusContenedorTablet2;;
+    }
+    &:hover {
+        color: v.$blanco;
+        transition: 800ms;
+        background-color: v.$secundario;
+        /* background: linear-gradient(to right, v.$enlaceFooterGradiente1 0%, v.$enlaceFooterGradiente2 100%); */
+        transition: 800ms;
+    } 
+}
+.pathEnlaceNav {
+    background-color: v.$principal;
+    /* background: linear-gradient(to right, v.$enlaceFooterGradiente1 0%, v.$enlaceFooterGradiente2 100%); */
+}

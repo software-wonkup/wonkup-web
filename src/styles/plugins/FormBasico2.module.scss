@@ -1,0 +1,26 @@
+@use '../../styles/sass/mixins.module.scss' as m;
+@use '../../styles/sass/variables.module.scss' as v;
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .form {
+        .titulo {
+            h2 {
+                color: v.$verdeOliva;
+            }
+        }
+        input {
+            border-color: v.$verdeOliva;
+        }
+        .contenedorBoton {
+            .botonCancelar {
+                background-color: v.$eliminar;
+                &:hover {
+                    background-color: v.$verdeOliva;
+                    transition: 800ms;
+                }
+            }
+        }
+    }
+}

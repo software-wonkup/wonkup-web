@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#f1c22d"/>
+
+  <!-- decorative dots -->
+  <g fill="#1d1d1b" opacity="0.18">
+    <circle cx="50" cy="50" r="6"/>
+    <circle cx="92" cy="78" r="3"/>
+    <circle cx="60" cy="115" r="3"/>
+    <circle cx="755" cy="450" r="6"/>
+    <circle cx="715" cy="425" r="3"/>
+    <circle cx="740" cy="395" r="3"/>
+    <circle cx="120" cy="430" r="4"/>
+    <circle cx="690" cy="80" r="4"/>
+  </g>
+
+  <!-- Big rocket on the left (brand iconography) -->
+  <g transform="translate(90 110)">
+    <!-- body -->
+    <path d="M50 0 C62 0 80 32 80 90 L80 230 L20 230 L20 90 C20 32 38 0 50 0 Z" fill="#50a8f3"/>
+    <!-- window -->
+    <circle cx="50" cy="85" r="16" fill="#fff"/>
+    <!-- left fin -->
+    <path d="M20 180 L0 230 L20 230 Z" fill="#50a8f3"/>
+    <!-- right fin -->
+    <path d="M80 180 L100 230 L80 230 Z" fill="#50a8f3"/>
+    <!-- flame -->
+    <path d="M30 230 L40 270 L50 240 L60 270 L70 230 Z" fill="#fff"/>
+  </g>
+
+  <!-- Team of 3 abstract figures on the right -->
+  <g transform="translate(380 175)">
+    <!-- Person A (left, short) -->
+    <circle cx="40" cy="42" r="32" fill="#fff"/>
+    <path d="M0 90 L0 155 Q0 180 40 180 Q80 180 80 155 L80 90 Z" fill="#fff"/>
+
+    <!-- Person B (center, tall) -->
+    <circle cx="160" cy="22" r="40" fill="#1d1d1b"/>
+    <path d="M115 72 L115 150 Q115 180 160 180 Q205 180 205 150 L205 72 Z" fill="#1d1d1b"/>
+
+    <!-- Person C (right, short) -->
+    <circle cx="280" cy="42" r="32" fill="#fff"/>
+    <path d="M240 90 L240 155 Q240 180 280 180 Q320 180 320 155 L320 90 Z" fill="#fff"/>
+  </g>
+
+  <!-- Ground line -->
+  <line x1="60" y1="400" x2="740" y2="400" stroke="#1d1d1b" stroke-width="3" opacity="0.28"/>
+
+  <!-- Small floating stars -->
+  <g fill="#1d1d1b">
+    <path d="M620 90 L626 102 L638 102 L628 110 L632 122 L620 114 L608 122 L612 110 L602 102 L614 102 Z" opacity="0.75"/>
+  </g>
+</svg>

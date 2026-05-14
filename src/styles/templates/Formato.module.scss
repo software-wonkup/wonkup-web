@@ -1,0 +1,54 @@
+@use '@/styles/sass/mixins.module.scss' as m;
+@use '@/styles/sass/variables.module.scss' as v;
+.contenedor {
+    h2 {
+        color: v.$plomoOscuro;
+        text-align: left;
+        margin-top: 0px;
+        padding: 50px 20px;
+        background-color: v.$blanco;
+        @include m.tablet2 {
+            margin-top: 40px;
+        }
+    }
+    .cuerpo {
+        width: 100%;
+        margin: 20px auto;
+        background: v.$blanco;
+        @include m.tablet1 {
+            margin: 30px auto 30px;
+        }
+        h3 {
+            font-size: 16px;
+            text-align: left;
+            color: v.$plomoOscuro;
+            padding: 20px;
+            border-bottom: 4px solid v.$secundario;
+        }
+        .nuevo {
+            padding: 20px 20px 0px 20px;
+            display: flex;
+            justify-content: flex-end;
+            button {
+                width: 100px;
+            }
+        }
+        form {
+            .filtros {
+                display: flex;
+                justify-content: space-between;
+                article {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .cantidad {
+                    input {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
