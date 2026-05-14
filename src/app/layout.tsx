@@ -10,11 +10,6 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: "Wonkup",
   description: "Incubadora Wonkup",
-  icons: {
-    icon: "/images/web/logo.png",
-    shortcut: "/images/web/logo.png",
-    apple: "/images/web/logo.png",
-  },
 };
 
 export default function RootLayout({

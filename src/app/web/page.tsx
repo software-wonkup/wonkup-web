@@ -109,6 +109,16 @@ const partners = [
     logo: "/images/web/aliados/milagritos.png",
     url: "https://www.facebook.com/people/Caf%C3%A9-Restaurante-Milagritos/100066489910653/",
   },
+  {
+    name: "Hemingway",
+    logo: "/images/web/aliados/hemingway.png",
+    url: "https://hemingway.edu.pe/",
+  },
+  {
+    name: "Nija",
+    logo: "/images/web/aliados/nija.png",
+    url: "https://www.facebook.com/nija.peru",
+  },
 ];
 
 export default function WebHome() {
